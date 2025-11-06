@@ -8,7 +8,7 @@
 > `limo_origin` is the project directory for original LiMO
 > 
 > `res` stores the output of `train_ui.ipynb` in each situation, including:
-> * `limo_origin.txt`: Output of original LiMO
+> * `limo_origin.txt`: Output of the original LiMO
 > * `limo_atf128.txt`: Output of **_LiMO-ATC_** with 128-dimensions `atfeatures`
 > * `limo_atf256.txt`: Output of **_LiMO-ATC_** with 256-dimensions `atfeatures`
 > * `new_2ds.ipynb` is used to generate approximated task and getting the embedded values of **_CodeBERT_**
