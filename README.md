@@ -50,7 +50,7 @@ For reference, the final-epoch metrics in these runs.
 
 ### Given labels (as-is)
 
-| Model             | Acc          | Macro F1     | F1(AI, pos)  | ROC-AUC     | AUPRC       |
+| Model             | Acc          | Macro F1     | Bin F1  | ROC-AUC     | AUPRC       |
 |-------------------|--------------|--------------|--------------|-------------|-------------|
 | limo_origin       | 77.471       | 71.051       | 57.418       | 0.848       | 0.765       |
 | ***limo_atf128*** | ***79.637*** | ***74.093*** | ***62.109*** | ***0.884*** | ***0.811*** |
@@ -63,7 +63,7 @@ For reference, the final-epoch metrics in these runs.
 
 ### Threshold = 0.5
 
-| Model             | Acc        | Macro F1   | F1(AI, pos) |
+| Model             | Acc        | Macro F1   | Bin F1 |
 |-------------------|------------|------------|-------------|
 | limo_origin       | 76.6       | 69.8       | 55.6        |
 | ***limo_atf128*** | ***77.9*** | ***71.6*** | ***58.3***  |
@@ -74,7 +74,7 @@ For reference, the final-epoch metrics in these runs.
 
 ### Threshold = YoudenJ (per-model)
 
-| Model             | Acc        | Macro F1   | F1(AI, pos) |
+| Model             | Acc        | Macro F1   | Bin F1 |
 |-------------------|------------|------------|-------------|
 | limo_origin       | 76.3       | 74.9       | 69.1        |
 | ***limo_atf128*** | ***79.8*** | ***78.6*** | ***73.5***  |
@@ -85,7 +85,7 @@ For reference, the final-epoch metrics in these runs.
 
 ### Threshold = bestPosF1 (per-model)
 
-| Model             | Acc        | Macro F1   | F1(AI, pos) |
+| Model             | Acc        | Macro F1   | Bin F1 |
 |-------------------|------------|------------|-------------|
 | limo_origin       | 76.3       | 74.9       | 69.1        |
 | ***limo_atf128*** | ***80.2*** | ***78.9*** | ***73.5***  |
