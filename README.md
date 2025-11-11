@@ -36,6 +36,53 @@ For reference, the final-epoch metrics in these runs.
 | atf128 |  20   |  **77.863**  |    **71.230**    |     57.415     | **0.861** | **0.776** |      **70.2**       |         75.4          |
 | atf256 |  20   |    77.039    |      70.032      |     55.540     |   0.859   |   0.774   |      **70.2**       |       **76.1**        |
 
-***Overall separability (AUC/AUPRC):** `atf128` ≥ `atf256` > `origin`.  
+---
 
-**Bottom line:** both `atf128` and `atf256` outperform `origin`; within the new models, `atf128` shows a slight edge on AUC/AUPRC and F1, while `atf256` edges the raw binF1@0.5 peak by a hair.
+## ***Test Results***
+
+### Given labels (as-is)
+
+| Model             | Acc          | Macro F1     | F1(AI, pos)  | ROC-AUC     | AUPRC       |
+|-------------------|--------------|--------------|--------------|-------------|-------------|
+| limo_origin       | 77.471       | 71.051       | 57.418       | 0.848       | 0.765       |
+| ***limo_atf128*** | ***79.637*** | ***74.093*** | ***62.109*** | ***0.884*** | ***0.811*** |
+| limo_atf256       | 77.039       | 70.032       | 55.540       | 0.859       | 0.774       |
+| limo_atfdoc       | 77.486       | 71.148       | 57.624       | 0.853       | 0.767       |
+
+---
+
+## ***Test Results*** - Threshold sweeps on scores
+
+### Threshold = 0.5
+
+| Model             | Acc        | Macro F1   | F1(AI, pos) |
+|-------------------|------------|------------|-------------|
+| limo_origin       | 76.6       | 69.8       | 55.6        |
+| ***limo_atf128*** | ***77.9*** | ***71.6*** | ***58.3***  |
+| limo_atf256       | 76.2       | 69.2       | 54.4        |
+| limo_atfdoc       | 76.5       | 69.7       | 55.4        |
+
+---
+
+### Threshold = YoudenJ (per-model)
+
+| Model             | Acc        | Macro F1   | F1(AI, pos) |
+|-------------------|------------|------------|-------------|
+| limo_origin       | 76.3       | 74.9       | 69.1        |
+| ***limo_atf128*** | ***79.8*** | ***78.6*** | ***73.5***  |
+| limo_atf256       | 77.5       | 76.1       | 70.2        |
+| limo_atfdoc       | 76.7       | 75.3       | 69.5        |
+
+---
+
+### Threshold = bestPosF1 (per-model)
+
+| Model             | Acc        | Macro F1   | F1(AI, pos) |
+|-------------------|------------|------------|-------------|
+| limo_origin       | 76.3       | 74.9       | 69.1        |
+| ***limo_atf128*** | ***80.2*** | ***78.9*** | ***73.5***  |
+| limo_atf256       | 77.5       | 76.1       | 70.2        |
+| limo_atfdoc       | 76.7       | 75.3       | 69.5        |
+
+
+**Overall performance:** `atf128` > `atf256` > `atfdoc` ≥ `origin`.  
