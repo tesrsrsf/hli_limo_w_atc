@@ -11,6 +11,7 @@
 > * `limo_origin.txt`: Output of the original LiMO
 > * `limo_atf128.txt`: Output of **_LiMO-ATC_** with 128-dimensions `atfeatures`
 > * `limo_atf256.txt`: Output of **_LiMO-ATC_** with 256-dimensions `atfeatures`
+> * `limo_atfdoc.txt`: Output of document-level `atfeatures`
 >
 > `do_test_res` stores the output of `train_ui.ipynb` in test dataset, including:
 > * `limo_origin.txt`: Output of the original LiMO
