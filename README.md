@@ -97,4 +97,4 @@ For reference, the final-epoch metrics in these runs.
 | limo_cos_sim      | 76.1       | 75.1       | 70.2       |
 
 
-**Overall performance:** `atf128` > `atf256` > `atfdoc` ≥ `origin`.  
+**Overall performance:** `atf128` > `atf256` > `atfdoc` ≥ `cos_sim` ≥ `origin`.  
