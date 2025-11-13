@@ -1,0 +1,34 @@
+Log INFO: split dataset...
+[OK] No problem_id overlap between Train and Val.
+[OK] No problem_id overlap between Train and Test.
+[OK] No problem_id overlap between Val and Test.
+Train: 1992, Validation: 231, Test: 564
+Train: 1992  | human=0 (0.00%), AI=1992 (100.00%)
+Val: 231  | human=0 (0.00%), AI=231 (100.00%)
+Test: 564  | human=0 (0.00%), AI=564 (100.00%)
+100%|██████████| 1992/1992 [00:01<00:00, 1180.11it/s]
+100%|██████████| 231/231 [00:00<00:00, 1104.44it/s]
+100%|██████████| 564/564 [00:01<00:00, 531.94it/s] 
+Log INFO: do test...
+Iteration: 100%|██████████| 18/18 [00:16<00:00,  1.07it/s]
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 77.188
+Macro F1 Score: 70.276
+Binary F1 Score (pos): 55.943
+Precision/Recall per class:
+75.3,96.5,86.5,41.3
+CM [[TN FP],[FN TP]] = [[7988, 288], [2618, 1845]]
+ROC_AUC (fpr-tpr): 0.858
+AUPRC: 0.773
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=76.4  MacroF1=69.3  BinF1(pos)=54.6
+ P/R per class -> 0(H): 74.9/95.8 , 1(AI): 84.0/40.4
+ CM [[TN FP],[FN TP]] = [[7931, 345], [2658, 1805]]
+[thr=YoudenJ] thr=0.217 | Acc=76.1  MacroF1=75.1  BinF1(pos)=70.2
+ P/R per class -> 0(H): 87.4/73.9 , 1(AI): 62.3/80.2
+ CM [[TN FP],[FN TP]] = [[6114, 2162], [883, 3580]]
+[thr=bestPosF1] thr=0.217 | Acc=76.1  MacroF1=75.1  BinF1(pos)=70.2
+ P/R per class -> 0(H): 87.4/73.9 , 1(AI): 62.3/80.2
+ CM [[TN FP],[FN TP]] = [[6114, 2162], [883, 3580]]
+77.2,70.3,55.9,75.3,96.5,86.5,41.3,0.858,0.773
