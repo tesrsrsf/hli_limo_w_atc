@@ -11,52 +11,41 @@
 > * `limo_origin.txt`: Output of the original LiMO
 > * `limo_atf128.txt`: Output of **_LiMO-ATC_** with 128-dimensions `atfeatures`
 > * `limo_atf256.txt`: Output of **_LiMO-ATC_** with 256-dimensions `atfeatures`
+> * `limo_cossim.txt`: Output of **_LiMO-ATC_** with weighted 128-dimensions `atfeatures` (weighted by cosine similarities)
 > * `limo_atfdoc.txt`: Output of document-level `atfeatures`
 >
 > `do_test_res` stores the output of `train_ui.ipynb` in test dataset, including:
 > * `limo_origin.txt`: Output of the original LiMO
 > * `limo_atf128.txt`: Output of **_LiMO-ATC_** with 128-dimensions `atfeatures`
 > * `limo_atf256.txt`: Output of **_LiMO-ATC_** with 256-dimensions `atfeatures`
+> * `limo_cossim.txt`: Output of **_LiMO-ATC_** with weighted 128-dimensions `atfeatures` (weighted by cosine similarities)
 > * `limo_atfdoc.txt`: Output of document-level `atfeatures`
 > 
 > `new_2ds.ipynb` is used to generate approximated task and getting the embedded values of **_CodeBERT_**
 
 --- 
 
-# ***Results***
-## Best Scores Across Epochs
-Peak values observed over all parsed epochs
-
-|        | best acc @thr=0.5 | best macroF1 @thr=0.5 | best binF1 @thr=0.5 |   best ROC_AUC   |    best AUPRC    | best BinF1 @thr=bestPosF1 | best MacroF1 @thr=bestPosF1 |
-|:------:|:-----------------:|:---------------------:|:-------------------:|:----------------:|:----------------:|:-------------------------:|:---------------------------:|
-| origin |    79.6 (ep19)    |      74.3 (ep14)      |     63.2 (ep9)      |   0.869 (ep18)   |   0.772 (ep19)   |        69.6 (ep17)        |         76.7 (ep13)         |
-| atf128 |  **81.5 (ep14)**  |    **77.4 (ep14)**    |     67.8 (ep14)     | **0.882 (ep19)** | **0.784 (ep17)** |      **71.8 (ep19)**      |       **78.7 (ep19)**       |
-| atf256 |    81.1 (ep13)    |    **77.4 (ep13)**    |   **68.1 (ep13)**   |   0.877 (ep19)   |   0.774 (ep19)   |        70.5 (ep17)        |         76.6 (ep20)         |
-
----
-
-## Last-Epoch (Epoch 20)
-For reference, the final-epoch metrics in these runs.
-
-|        | epoch | acc @thr=0.5 | macroF1 @thr=0.5 | binF1 @thr=0.5 |  ROC_AUC  |   AUPRC   | BinF1 thr=bestPosF1 | MacroF1 thr=bestPosF1 |
-|:------:|:-----:|:------------:|:----------------:|:--------------:|:---------:|:---------:|:-------------------:|:---------------------:|
-| origin |  20   |    77.471    |      71.051      |     57.418     |   0.848   |   0.765   |        69.1         |         74.9          |
-| atf128 |  20   |  **77.863**  |    **71.230**    |     57.415     | **0.861** | **0.776** |      **70.2**       |         75.4          |
-| atf256 |  20   |    77.039    |      70.032      |     55.540     |   0.859   |   0.774   |      **70.2**       |       **76.1**        |
-
----
-
 ## ***Test Results***
+
+> * **Updated _2025/11/17_**
+>   * Experiments were done with new parameters
+>     * `Seed`:   **42**
+>     * `lr`:     **5e-5**
+>     * `Epoch`:  **60**
+>     * `Alpha`:  **0.8**
+>   * After updating parameters, some interesting results are noticed
+>     * _Italic_ means the number is higher than `limo_origin`
+>     * **_Bolded Italic_** means the number is the highest among the results
 
 ### Given labels (as-is)
 
 | Model             | Acc          | Macro F1     | Bin F1       | ROC-AUC     | AUPRC       |
 |-------------------|--------------|--------------|--------------|-------------|-------------|
-| limo_origin       | 77.471       | 71.051       | 57.418       | 0.848       | 0.765       |
-| ***limo_atf128*** | ***79.637*** | ***74.093*** | ***62.109*** | ***0.884*** | ***0.811*** |
-| limo_atf256       | 77.039       | 70.032       | 55.540       | 0.859       | 0.774       |
-| limo_atfdoc       | 77.486       | 71.148       | 57.624       | 0.853       | 0.767       |
-| limo_cos_sim      | 77.188       | 70.276       | 55.943       | 0.858       | 0.773       |
+| limo_origin       | 81.616       | 79.064       | 71.756       | 0.869       | 0.781       |
+| ***limo_atf128*** | ***82.777*** | ***80.191*** | ***73.033*** | ***0.884*** | ***0.811*** |
+| limo_atf256       | _82.047_     | 79.033       | 71.084       | _0.881_     | _0.805_     |
+| limo_atfdoc       | 81.294       | 78.461       | 70.649       | _0.876_     | _0.803_     |
+| limo_cos_sim      | _82.134_     | _79.124_     | 71.197       | _0.882_     | _0.809_     |
 
 ---
 
@@ -66,11 +55,11 @@ For reference, the final-epoch metrics in these runs.
 
 | Model             | Acc        | Macro F1   | Bin F1     |
 |-------------------|------------|------------|------------|
-| limo_origin       | 76.6       | 69.8       | 55.6       |
-| ***limo_atf128*** | ***77.9*** | ***71.6*** | ***58.3*** |
-| limo_atf256       | 76.2       | 69.2       | 54.4       |
-| limo_atfdoc       | 76.5       | 69.7       | 55.4       |
-| limo_cos_sim      | 76.4       | 69.3       | 54.6       |
+| limo_origin       | 80.1       | 77.2       | 69.2       |
+| ***limo_atf128*** | ***81.0*** | ***78.3*** | ***70.5*** |
+| limo_atf256       | _80.8_     | _77.8_     | _69.7_     |
+| limo_atfdoc       | 80.1       | _77.3_     | 69.2       |
+| limo_cos_sim      | _80.8_     | _77.9_     | _69.8_     |
 
 ---
 
@@ -78,11 +67,11 @@ For reference, the final-epoch metrics in these runs.
 
 | Model             | Acc        | Macro F1   | Bin F1     |
 |-------------------|------------|------------|------------|
-| limo_origin       | 76.3       | 74.9       | 69.1       |
-| ***limo_atf128*** | ***79.8*** | ***78.6*** | ***73.5*** |
-| limo_atf256       | 77.5       | 76.1       | 70.2       |
-| limo_atfdoc       | 76.7       | 75.3       | 69.5       |
-| limo_cos_sim      | 76.1       | 75.1       | 70.2       |
+| limo_origin       | 78.4       | 77.2       | 71.9       |
+| ***limo_atf128*** | _79.0_     | _77.9_     | _73.0_     |
+| limo_atf256       | ***79.6*** | ***78.4*** | **_73.2_** |
+| limo_atfdoc       | _79.1_     | _77.8_     | _72.4_     |
+| limo_cos_sim      | _79.0_     | _77.8_     | _72.7_     |
 
 ---
 
@@ -90,11 +79,32 @@ For reference, the final-epoch metrics in these runs.
 
 | Model             | Acc        | Macro F1   | Bin F1     |
 |-------------------|------------|------------|------------|
-| limo_origin       | 76.3       | 74.9       | 69.1       |
-| ***limo_atf128*** | ***80.2*** | ***78.9*** | ***73.5*** |
-| limo_atf256       | 77.5       | 76.1       | 70.2       |
-| limo_atfdoc       | 76.7       | 75.3       | 69.5       |
-| limo_cos_sim      | 76.1       | 75.1       | 70.2       |
+| limo_origin       | 78.4       | 77.2       | 71.9       |
+| ***limo_atf128*** | ***79.9*** | ***78.5*** | _73.0_     |
+| limo_atf256       | _79.6_     | _78.4_     | **_73.2_** |
+| limo_atfdoc       | _79.2_     | _77.9_     | _72.4_     |
+| limo_cos_sim      | _79.7_     | _78.3_     | 72.8       |
 
-
-**Overall performance:** `atf128` > `atf256` > `atfdoc` ≥ `cos_sim` ≥ `origin`.  
+---
+## Analysis
+> * Overall, `limo_atf128` is having the best performance
+>   * `limo_atf256` and `limo_atfdoc` showed a better performance compare to old version parameters. 
+> * _**AUPRC**_ and _**ROC-AUC**_ improved most significantly, all atf-involved models has a better result in these two criteria.  
+> * Conclusion below is received after calculating the cosine similarity between local atf (line-level) and global atf (doc-level)
+>   * Image: the relationship between cosine similarity and lines
+>     ![](/assets/cosine_sim_dis.png)
+>     * ("High-info lines only" means: lines like 'else', '[', '(', '{'... are ignored)
+>   * Average cosine similarities:
+>     * ```
+>       Filtered Human  mean: 0.18534581653262655 std: 0.3078455960799607
+>       Filtered Machine mean: 0.14431030143421408 std: 0.2951902140976671
+>       ```
+>   * These results showed that there is a difference in cosine similarity between local-atf and global-atf among human and machine generated codes
+>     * The difference in average cos_sim
+>     * Human written lines are likely tobe closer to the global intent as shown in the image
+>       * (The blue part shifts to the right, and the orange is closer to the left-hand-side)
+>   * Even though this result suggests Approximated Task Feature (a.t.f) as an effective feature in MGC detection, but the difference between Human-ATF and Machine-ATF are not decisive enough to detect MGC independently
+>     * However, as a supportive feature, it does play a role of improving the performance of LiMO
+>       * a.t.f can be considered as a weak signal
+>     * The prompting strategy can be revised to fit this feature
+>       * Especially for global intent (doc-level)

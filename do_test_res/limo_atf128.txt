@@ -6,29 +6,29 @@ Train: 1992, Validation: 231, Test: 564
 Train: 1992  | human=0 (0.00%), AI=1992 (100.00%)
 Val: 231  | human=0 (0.00%), AI=231 (100.00%)
 Test: 564  | human=0 (0.00%), AI=564 (100.00%)
-100%|██████████| 1992/1992 [00:01<00:00, 1816.15it/s]
-100%|██████████| 231/231 [00:00<00:00, 3024.21it/s]
-100%|██████████| 564/564 [00:00<00:00, 811.05it/s] 
+100%|██████████| 1992/1992 [00:01<00:00, 1780.66it/s]
+100%|██████████| 231/231 [00:00<00:00, 3132.17it/s]
+100%|██████████| 564/564 [00:00<00:00, 2115.40it/s]
 Log INFO: do test...
-Iteration: 100%|██████████| 18/18 [00:18<00:00,  1.01s/it]
+Iteration: 100%|██████████| 18/18 [00:17<00:00,  1.04it/s]
 ******** Sentence Level Evalation ********
 === Given labels (as-is) ===
-Accuracy: 79.637
-Macro F1 Score: 74.093
-Binary F1 Score (pos): 62.109
+Accuracy: 82.777
+Macro F1 Score: 80.191
+Binary F1 Score (pos): 73.033
 Precision/Recall per class:
-77.4,96.9,89.2,47.6
-CM [[TN FP],[FN TP]] = [[8019, 257], [2337, 2126]]
+83.5,91.5,80.9,66.6
+CM [[TN FP],[FN TP]] = [[7574, 702], [1492, 2971]]
 ROC_AUC (fpr-tpr): 0.884
 AUPRC: 0.811
 === Threshold sweeps on scores ===
-[thr=0.5] thr=0.500 | Acc=77.9  MacroF1=71.6  BinF1(pos)=58.3
- P/R per class -> 0(H): 76.1/96.2 , 1(AI): 86.1/44.0
- CM [[TN FP],[FN TP]] = [[7959, 317], [2498, 1965]]
-[thr=YoudenJ] thr=0.239 | Acc=79.8  MacroF1=78.6  BinF1(pos)=73.5
- P/R per class -> 0(H): 88.1/79.6 , 1(AI): 67.9/80.1
- CM [[TN FP],[FN TP]] = [[6585, 1691], [888, 3575]]
-[thr=bestPosF1] thr=0.252 | Acc=80.2  MacroF1=78.9  BinF1(pos)=73.5
- P/R per class -> 0(H): 87.5/81.1 , 1(AI): 69.2/78.5
- CM [[TN FP],[FN TP]] = [[6715, 1561], [960, 3503]]
-79.6,74.1,62.1,77.4,96.9,89.2,47.6,0.884,0.811
+[thr=0.5] thr=0.500 | Acc=81.0  MacroF1=78.3  BinF1(pos)=70.5
+ P/R per class -> 0(H): 82.5/89.9 , 1(AI): 77.5/64.7
+ CM [[TN FP],[FN TP]] = [[7437, 839], [1576, 2887]]
+[thr=YoudenJ] thr=0.316 | Acc=79.0  MacroF1=77.9  BinF1(pos)=73.0
+ P/R per class -> 0(H): 88.3/78.1 , 1(AI): 66.5/80.8
+ CM [[TN FP],[FN TP]] = [[6462, 1814], [856, 3607]]
+[thr=bestPosF1] thr=0.359 | Acc=79.9  MacroF1=78.5  BinF1(pos)=73.0
+ P/R per class -> 0(H): 87.0/81.3 , 1(AI): 69.0/77.4
+ CM [[TN FP],[FN TP]] = [[6726, 1550], [1007, 3456]]
+82.8,80.2,73.0,83.5,91.5,80.9,66.6,0.884,0.811
