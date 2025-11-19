@@ -101,7 +101,7 @@
 >       ```
 >   * These results showed that there is a difference in cosine similarity between local-atf and global-atf among human and machine generated codes
 >     * The difference in average cos_sim
->     * Human written lines are likely tobe closer to the global intent as shown in the image
+>     * Human written lines are likely to be closer to the global intent as shown in the image
 >       * (The blue part shifts to the right, and the orange is closer to the left-hand-side)
 >   * Even though this result suggests Approximated Task Feature (a.t.f) as an effective feature in MGC detection, but the difference between Human-ATF and Machine-ATF are not decisive enough to detect MGC independently
 >     * However, as a supportive feature, it does play a role of improving the performance of LiMO
