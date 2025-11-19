@@ -89,7 +89,7 @@
 ## Analysis
 > * Overall, `limo_atf128` is having the best performance
 >   * `limo_atf256` and `limo_atfdoc` showed a better performance compare to old version parameters. 
-> * _**AUPRC**_ and _**ROC-AUC**_ improved most significantly, all atf-involved models has a better result in these two criteria.  
+> * _**AUPRC**_ and _**ROC-AUC**_ improved most significantly, all atf-involved models has a better result in these two metrics.  
 > * Conclusion below is received after calculating the cosine similarity between local atf (line-level) and global atf (doc-level)
 >   * Image: the relationship between cosine similarity and lines
 >     ![](/assets/cosine_sim_dis.png)
