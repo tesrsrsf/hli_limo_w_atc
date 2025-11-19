@@ -35,7 +35,7 @@
 >     * `Alpha`:  **0.8**
 >   * After updating parameters, some interesting results are noticed
 >     * _Italic_ means the number is higher than `limo_origin`
->     * **_Bolded Italic_** means the number is the highest among the results
+>     * **_Bolded-Italic_** means the number is the highest among the results
 
 ### Given labels (as-is)
 
