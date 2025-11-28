@@ -1,0 +1,1536 @@
+Log INFO: split dataset...
+[OK] No problem_id overlap between Train and Val.
+[OK] No problem_id overlap between Train and Test.
+[OK] No problem_id overlap between Val and Test.
+Train: 1992, Validation: 231, Test: 564
+Train: 1992  | human=0 (0.00%), AI=1992 (100.00%)
+Val: 231  | human=0 (0.00%), AI=231 (100.00%)
+Test: 564  | human=0 (0.00%), AI=564 (100.00%)
+100%|██████████| 1992/1992 [00:01<00:00, 1700.46it/s]
+100%|██████████| 231/231 [00:00<00:00, 2838.78it/s]
+100%|██████████| 564/564 [00:00<00:00, 2747.28it/s]
+Log INFO: do train...
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.49it/s]
+epoch 1: train_loss 0.04187276468627037
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.30it/s]
+Validation Loss: 1.4519873410463333
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 67.122
+Macro F1 Score: 40.163
+Binary F1 Score (pos): 0.000
+Precision/Recall per class:
+67.1,100.0,0.0,0.0
+CM [[TN FP],[FN TP]] = [[3148, 0], [1542, 0]]
+ROC_AUC (fpr-tpr): 0.493
+AUPRC: 0.312
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=67.1  MacroF1=40.2  BinF1(pos)=0.0
+ P/R per class -> 0(H): 67.1/100.0 , 1(AI): 0.0/0.0
+ CM [[TN FP],[FN TP]] = [[3148, 0], [1542, 0]]
+[thr=YoudenJ] thr=0.337 | Acc=51.5  MacroF1=50.0  BinF1(pos)=41.6
+ P/R per class -> 0(H): 68.7/51.0 , 1(AI): 34.4/52.5
+ CM [[TN FP],[FN TP]] = [[1604, 1544], [732, 810]]
+[thr=bestPosF1] thr=0.282 | Acc=32.9  MacroF1=24.9  BinF1(pos)=49.5
+ P/R per class -> 0(H): 66.7/0.1 , 1(AI): 32.9/99.9
+ CM [[TN FP],[FN TP]] = [[4, 3144], [2, 1540]]
+67.1,40.2,0.0,67.1,100.0,0.0,0.0,0.493,0.312
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.48it/s]
+epoch 2: train_loss 0.02833462231570766
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.29it/s]
+Validation Loss: 1.2225573807954788
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 67.122
+Macro F1 Score: 40.163
+Binary F1 Score (pos): 0.000
+Precision/Recall per class:
+67.1,100.0,0.0,0.0
+CM [[TN FP],[FN TP]] = [[3148, 0], [1542, 0]]
+ROC_AUC (fpr-tpr): 0.648
+AUPRC: 0.440
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=67.1  MacroF1=40.2  BinF1(pos)=0.0
+ P/R per class -> 0(H): 67.1/100.0 , 1(AI): 0.0/0.0
+ CM [[TN FP],[FN TP]] = [[3148, 0], [1542, 0]]
+[thr=YoudenJ] thr=0.286 | Acc=52.2  MacroF1=52.0  BinF1(pos)=55.1
+ P/R per class -> 0(H): 86.7/34.1 , 1(AI): 39.9/89.3
+ CM [[TN FP],[FN TP]] = [[1072, 2076], [165, 1377]]
+[thr=bestPosF1] thr=0.281 | Acc=51.3  MacroF1=50.9  BinF1(pos)=55.3
+ P/R per class -> 0(H): 88.5/31.5 , 1(AI): 39.6/91.6
+ CM [[TN FP],[FN TP]] = [[993, 2155], [129, 1413]]
+67.1,40.2,0.0,67.1,100.0,0.0,0.0,0.648,0.440
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.48it/s]
+epoch 3: train_loss 0.024998627691751436
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.24it/s]
+Validation Loss: 1.0971911251544952
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 67.271
+Macro F1 Score: 40.651
+Binary F1 Score (pos): 0.904
+Precision/Recall per class:
+67.2,100.0,100.0,0.5
+CM [[TN FP],[FN TP]] = [[3148, 0], [1535, 7]]
+ROC_AUC (fpr-tpr): 0.725
+AUPRC: 0.565
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=69.4  MacroF1=49.6  BinF1(pos)=17.9
+ P/R per class -> 0(H): 69.1/98.5 , 1(AI): 76.8/10.1
+ CM [[TN FP],[FN TP]] = [[3101, 47], [1386, 156]]
+[thr=YoudenJ] thr=0.371 | Acc=66.1  MacroF1=63.9  BinF1(pos)=54.9
+ P/R per class -> 0(H): 78.8/67.8 , 1(AI): 48.8/62.8
+ CM [[TN FP],[FN TP]] = [[2134, 1014], [574, 968]]
+[thr=bestPosF1] thr=0.309 | Acc=55.6  MacroF1=55.6  BinF1(pos)=56.5
+ P/R per class -> 0(H): 86.8/40.0 , 1(AI): 41.7/87.5
+ CM [[TN FP],[FN TP]] = [[1259, 1889], [192, 1350]]
+67.3,40.7,0.9,67.2,100.0,100.0,0.5,0.725,0.565
+Iteration: 100%|██████████| 63/63 [00:41<00:00,  1.51it/s]
+epoch 4: train_loss 0.022632950887320532
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.20it/s]
+Validation Loss: 0.9880833700299263
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 68.763
+Macro F1 Score: 45.741
+Binary F1 Score (pos): 10.398
+Precision/Recall per class:
+68.3,99.7,91.4,5.5
+CM [[TN FP],[FN TP]] = [[3140, 8], [1457, 85]]
+ROC_AUC (fpr-tpr): 0.735
+AUPRC: 0.575
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=70.4  MacroF1=52.1  BinF1(pos)=22.5
+ P/R per class -> 0(H): 69.8/98.5 , 1(AI): 81.0/13.0
+ CM [[TN FP],[FN TP]] = [[3101, 47], [1341, 201]]
+[thr=YoudenJ] thr=0.309 | Acc=67.8  MacroF1=65.3  BinF1(pos)=56.0
+ P/R per class -> 0(H): 79.3/70.5 , 1(AI): 50.9/62.4
+ CM [[TN FP],[FN TP]] = [[2219, 929], [580, 962]]
+[thr=bestPosF1] thr=0.230 | Acc=58.5  MacroF1=58.4  BinF1(pos)=57.4
+ P/R per class -> 0(H): 86.3/45.3 , 1(AI): 43.3/85.3
+ CM [[TN FP],[FN TP]] = [[1427, 1721], [227, 1315]]
+68.8,45.7,10.4,68.3,99.7,91.4,5.5,0.735,0.575
+Iteration: 100%|██████████| 63/63 [00:41<00:00,  1.53it/s]
+epoch 5: train_loss 0.021035458833452255
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.17it/s]
+Validation Loss: 0.8822590410709381
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 75.864
+Macro F1 Score: 70.177
+Binary F1 Score (pos): 57.154
+Precision/Recall per class:
+78.1,89.0,68.6,49.0
+CM [[TN FP],[FN TP]] = [[2803, 345], [787, 755]]
+ROC_AUC (fpr-tpr): 0.791
+AUPRC: 0.657
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=75.2  MacroF1=69.8  BinF1(pos)=57.1
+ P/R per class -> 0(H): 78.2/87.5 , 1(AI): 66.2/50.2
+ CM [[TN FP],[FN TP]] = [[2753, 395], [768, 774]]
+[thr=YoudenJ] thr=0.380 | Acc=68.6  MacroF1=67.3  BinF1(pos)=61.0
+ P/R per class -> 0(H): 84.1/65.7 , 1(AI): 51.5/74.6
+ CM [[TN FP],[FN TP]] = [[2067, 1081], [392, 1150]]
+[thr=bestPosF1] thr=0.362 | Acc=67.2  MacroF1=66.4  BinF1(pos)=61.0
+ P/R per class -> 0(H): 85.2/61.9 , 1(AI): 50.1/78.1
+ CM [[TN FP],[FN TP]] = [[1948, 1200], [338, 1204]]
+75.9,70.2,57.2,78.1,89.0,68.6,49.0,0.791,0.657
+Iteration: 100%|██████████| 63/63 [00:40<00:00,  1.55it/s]
+epoch 6: train_loss 0.01917417793874703
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.22it/s]
+Validation Loss: 0.7791687175631523
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 75.928
+Macro F1 Score: 66.698
+Binary F1 Score (pos): 49.167
+Precision/Recall per class:
+75.2,95.8,80.4,35.4
+CM [[TN FP],[FN TP]] = [[3015, 133], [996, 546]]
+ROC_AUC (fpr-tpr): 0.828
+AUPRC: 0.690
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=75.3  MacroF1=65.2  BinF1(pos)=46.6
+ P/R per class -> 0(H): 74.5/96.1 , 1(AI): 80.5/32.7
+ CM [[TN FP],[FN TP]] = [[3026, 122], [1037, 505]]
+[thr=YoudenJ] thr=0.282 | Acc=73.9  MacroF1=72.4  BinF1(pos)=65.9
+ P/R per class -> 0(H): 86.4/72.6 , 1(AI): 57.8/76.6
+ CM [[TN FP],[FN TP]] = [[2285, 863], [361, 1181]]
+[thr=bestPosF1] thr=0.282 | Acc=73.9  MacroF1=72.4  BinF1(pos)=65.9
+ P/R per class -> 0(H): 86.4/72.6 , 1(AI): 57.8/76.6
+ CM [[TN FP],[FN TP]] = [[2285, 863], [361, 1181]]
+75.9,66.7,49.2,75.2,95.8,80.4,35.4,0.828,0.690
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.50it/s]
+epoch 7: train_loss 0.018086547312873697
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.23it/s]
+Validation Loss: 0.7376204058527946
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 77.164
+Macro F1 Score: 71.553
+Binary F1 Score (pos): 58.918
+Precision/Recall per class:
+78.6,90.6,72.1,49.8
+CM [[TN FP],[FN TP]] = [[2851, 297], [774, 768]]
+ROC_AUC (fpr-tpr): 0.833
+AUPRC: 0.702
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=76.5  MacroF1=71.4  BinF1(pos)=59.5
+ P/R per class -> 0(H): 79.1/88.2 , 1(AI): 68.6/52.5
+ CM [[TN FP],[FN TP]] = [[2778, 370], [733, 809]]
+[thr=YoudenJ] thr=0.365 | Acc=73.4  MacroF1=72.1  BinF1(pos)=66.2
+ P/R per class -> 0(H): 87.5/70.4 , 1(AI): 56.8/79.4
+ CM [[TN FP],[FN TP]] = [[2217, 931], [318, 1224]]
+[thr=bestPosF1] thr=0.365 | Acc=73.4  MacroF1=72.1  BinF1(pos)=66.2
+ P/R per class -> 0(H): 87.5/70.4 , 1(AI): 56.8/79.4
+ CM [[TN FP],[FN TP]] = [[2217, 931], [318, 1224]]
+77.2,71.6,58.9,78.6,90.6,72.1,49.8,0.833,0.702
+Iteration: 100%|██████████| 63/63 [00:55<00:00,  1.13it/s]
+epoch 8: train_loss 0.017306513699983792
+Iteration: 100%|██████████| 8/8 [00:07<00:00,  1.01it/s]
+Validation Loss: 0.6965662315487862
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 78.060
+Macro F1 Score: 70.544
+Binary F1 Score (pos): 55.666
+Precision/Recall per class:
+77.1,95.8,82.9,41.9
+CM [[TN FP],[FN TP]] = [[3015, 133], [896, 646]]
+ROC_AUC (fpr-tpr): 0.856
+AUPRC: 0.738
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=77.2  MacroF1=69.7  BinF1(pos)=54.6
+ P/R per class -> 0(H): 76.8/94.6 , 1(AI): 79.2/41.6
+ CM [[TN FP],[FN TP]] = [[2979, 169], [900, 642]]
+[thr=YoudenJ] thr=0.299 | Acc=77.1  MacroF1=75.5  BinF1(pos)=69.2
+ P/R per class -> 0(H): 87.9/76.4 , 1(AI): 61.9/78.5
+ CM [[TN FP],[FN TP]] = [[2404, 744], [332, 1210]]
+[thr=bestPosF1] thr=0.299 | Acc=77.1  MacroF1=75.5  BinF1(pos)=69.2
+ P/R per class -> 0(H): 87.9/76.4 , 1(AI): 61.9/78.5
+ CM [[TN FP],[FN TP]] = [[2404, 744], [332, 1210]]
+78.1,70.5,55.7,77.1,95.8,82.9,41.9,0.856,0.738
+Iteration: 100%|██████████| 63/63 [00:56<00:00,  1.11it/s]
+epoch 9: train_loss 0.017123340599475397
+Iteration: 100%|██████████| 8/8 [00:07<00:00,  1.00it/s]
+Validation Loss: 0.679926410317421
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 81.087
+Macro F1 Score: 77.080
+Binary F1 Score (pos): 67.497
+Precision/Recall per class:
+82.3,91.6,77.6,59.7
+CM [[TN FP],[FN TP]] = [[2882, 266], [621, 921]]
+ROC_AUC (fpr-tpr): 0.858
+AUPRC: 0.742
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=78.4  MacroF1=74.0  BinF1(pos)=63.4
+ P/R per class -> 0(H): 80.8/88.9 , 1(AI): 71.5/56.9
+ CM [[TN FP],[FN TP]] = [[2798, 350], [664, 878]]
+[thr=YoudenJ] thr=0.411 | Acc=78.0  MacroF1=76.0  BinF1(pos)=69.0
+ P/R per class -> 0(H): 86.4/79.9 , 1(AI): 64.4/74.3
+ CM [[TN FP],[FN TP]] = [[2514, 634], [396, 1146]]
+[thr=bestPosF1] thr=0.411 | Acc=78.0  MacroF1=76.0  BinF1(pos)=69.0
+ P/R per class -> 0(H): 86.4/79.9 , 1(AI): 64.4/74.3
+ CM [[TN FP],[FN TP]] = [[2514, 634], [396, 1146]]
+81.1,77.1,67.5,82.3,91.6,77.6,59.7,0.858,0.742
+Iteration: 100%|██████████| 63/63 [00:53<00:00,  1.19it/s]
+epoch 10: train_loss 0.01666234674612208
+Iteration: 100%|██████████| 8/8 [00:07<00:00,  1.04it/s]
+Validation Loss: 0.656328096985817
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 79.616
+Macro F1 Score: 74.565
+Binary F1 Score (pos): 63.231
+Precision/Recall per class:
+80.2,92.5,77.7,53.3
+CM [[TN FP],[FN TP]] = [[2912, 236], [720, 822]]
+ROC_AUC (fpr-tpr): 0.866
+AUPRC: 0.753
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=78.5  MacroF1=73.2  BinF1(pos)=61.2
+ P/R per class -> 0(H): 79.4/91.7 , 1(AI): 75.3/51.6
+ CM [[TN FP],[FN TP]] = [[2887, 261], [747, 795]]
+[thr=YoudenJ] thr=0.356 | Acc=78.5  MacroF1=76.6  BinF1(pos)=70.0
+ P/R per class -> 0(H): 87.2/79.6 , 1(AI): 64.7/76.2
+ CM [[TN FP],[FN TP]] = [[2507, 641], [367, 1175]]
+[thr=bestPosF1] thr=0.357 | Acc=78.6  MacroF1=76.7  BinF1(pos)=70.0
+ P/R per class -> 0(H): 87.2/79.8 , 1(AI): 64.9/76.0
+ CM [[TN FP],[FN TP]] = [[2513, 635], [370, 1172]]
+79.6,74.6,63.2,80.2,92.5,77.7,53.3,0.866,0.753
+Iteration: 100%|██████████| 63/63 [00:56<00:00,  1.12it/s]
+epoch 11: train_loss 0.016265052104634897
+Iteration: 100%|██████████| 8/8 [00:08<00:00,  1.12s/it]
+Validation Loss: 0.6544114276766777
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 79.147
+Macro F1 Score: 73.292
+Binary F1 Score (pos): 60.786
+Precision/Recall per class:
+79.0,93.8,79.6,49.2
+CM [[TN FP],[FN TP]] = [[2954, 194], [784, 758]]
+ROC_AUC (fpr-tpr): 0.869
+AUPRC: 0.749
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=78.0  MacroF1=71.2  BinF1(pos)=57.2
+ P/R per class -> 0(H): 77.7/94.4 , 1(AI): 79.7/44.6
+ CM [[TN FP],[FN TP]] = [[2973, 175], [855, 687]]
+[thr=YoudenJ] thr=0.275 | Acc=77.3  MacroF1=76.0  BinF1(pos)=70.3
+ P/R per class -> 0(H): 89.3/75.3 , 1(AI): 61.8/81.6
+ CM [[TN FP],[FN TP]] = [[2369, 779], [284, 1258]]
+[thr=bestPosF1] thr=0.275 | Acc=77.3  MacroF1=76.0  BinF1(pos)=70.3
+ P/R per class -> 0(H): 89.3/75.3 , 1(AI): 61.8/81.6
+ CM [[TN FP],[FN TP]] = [[2369, 779], [284, 1258]]
+79.1,73.3,60.8,79.0,93.8,79.6,49.2,0.869,0.749
+Iteration: 100%|██████████| 63/63 [00:59<00:00,  1.06it/s]
+epoch 12: train_loss 0.016105232834224662
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.16it/s]
+Validation Loss: 0.6432901695370674
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 79.190
+Macro F1 Score: 73.640
+Binary F1 Score (pos): 61.545
+Precision/Recall per class:
+79.4,93.2,78.4,50.6
+CM [[TN FP],[FN TP]] = [[2933, 215], [761, 781]]
+ROC_AUC (fpr-tpr): 0.874
+AUPRC: 0.759
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=78.7  MacroF1=72.7  BinF1(pos)=59.7
+ P/R per class -> 0(H): 78.6/93.8 , 1(AI): 79.1/48.0
+ CM [[TN FP],[FN TP]] = [[2953, 195], [802, 740]]
+[thr=YoudenJ] thr=0.314 | Acc=78.6  MacroF1=77.1  BinF1(pos)=71.2
+ P/R per class -> 0(H): 88.9/77.8 , 1(AI): 63.9/80.2
+ CM [[TN FP],[FN TP]] = [[2450, 698], [305, 1237]]
+[thr=bestPosF1] thr=0.321 | Acc=79.0  MacroF1=77.3  BinF1(pos)=71.2
+ P/R per class -> 0(H): 88.5/78.9 , 1(AI): 64.8/79.1
+ CM [[TN FP],[FN TP]] = [[2485, 663], [323, 1219]]
+79.2,73.6,61.5,79.4,93.2,78.4,50.6,0.874,0.759
+Iteration: 100%|██████████| 63/63 [00:57<00:00,  1.09it/s]
+epoch 13: train_loss 0.015930058508520088
+Iteration: 100%|██████████| 8/8 [00:08<00:00,  1.01s/it]
+Validation Loss: 0.6324814856052399
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 82.623
+Macro F1 Score: 79.882
+Binary F1 Score (pos): 72.457
+Precision/Recall per class:
+85.6,89.0,75.7,69.5
+CM [[TN FP],[FN TP]] = [[2803, 345], [470, 1072]]
+ROC_AUC (fpr-tpr): 0.878
+AUPRC: 0.774
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=80.9  MacroF1=78.2  BinF1(pos)=70.6
+ P/R per class -> 0(H): 85.4/86.3 , 1(AI): 71.4/69.8
+ CM [[TN FP],[FN TP]] = [[2718, 430], [466, 1076]]
+[thr=YoudenJ] thr=0.456 | Acc=80.3  MacroF1=78.3  BinF1(pos)=71.7
+ P/R per class -> 0(H): 87.6/82.3 , 1(AI): 67.8/76.1
+ CM [[TN FP],[FN TP]] = [[2591, 557], [368, 1174]]
+[thr=bestPosF1] thr=0.456 | Acc=80.3  MacroF1=78.3  BinF1(pos)=71.7
+ P/R per class -> 0(H): 87.6/82.3 , 1(AI): 67.8/76.1
+ CM [[TN FP],[FN TP]] = [[2591, 557], [368, 1174]]
+82.6,79.9,72.5,85.6,89.0,75.7,69.5,0.878,0.774
+Iteration: 100%|██████████| 63/63 [00:58<00:00,  1.07it/s]
+epoch 14: train_loss 0.015651755448844697
+Iteration: 100%|██████████| 8/8 [00:09<00:00,  1.15s/it]
+Validation Loss: 0.6174555197358131
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 82.196
+Macro F1 Score: 78.292
+Binary F1 Score (pos): 69.086
+Precision/Recall per class:
+82.8,92.8,80.5,60.5
+CM [[TN FP],[FN TP]] = [[2922, 226], [609, 933]]
+ROC_AUC (fpr-tpr): 0.881
+AUPRC: 0.784
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=81.0  MacroF1=76.7  BinF1(pos)=66.7
+ P/R per class -> 0(H): 81.8/92.2 , 1(AI): 78.4/58.0
+ CM [[TN FP],[FN TP]] = [[2902, 246], [647, 895]]
+[thr=YoudenJ] thr=0.380 | Acc=80.8  MacroF1=78.9  BinF1(pos)=72.4
+ P/R per class -> 0(H): 87.8/83.0 , 1(AI): 68.8/76.4
+ CM [[TN FP],[FN TP]] = [[2613, 535], [364, 1178]]
+[thr=bestPosF1] thr=0.380 | Acc=80.8  MacroF1=78.9  BinF1(pos)=72.4
+ P/R per class -> 0(H): 87.8/83.0 , 1(AI): 68.8/76.4
+ CM [[TN FP],[FN TP]] = [[2613, 535], [364, 1178]]
+82.2,78.3,69.1,82.8,92.8,80.5,60.5,0.881,0.784
+Iteration: 100%|██████████| 63/63 [00:59<00:00,  1.06it/s]
+epoch 15: train_loss 0.015602706532393183
+Iteration: 100%|██████████| 8/8 [00:07<00:00,  1.01it/s]
+Validation Loss: 0.6127191074192524
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 83.241
+Macro F1 Score: 80.176
+Binary F1 Score (pos): 72.382
+Precision/Recall per class:
+84.9,91.3,79.0,66.8
+CM [[TN FP],[FN TP]] = [[2874, 274], [512, 1030]]
+ROC_AUC (fpr-tpr): 0.884
+AUPRC: 0.784
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=81.1  MacroF1=77.7  BinF1(pos)=68.9
+ P/R per class -> 0(H): 83.4/89.6 , 1(AI): 75.1/63.7
+ CM [[TN FP],[FN TP]] = [[2822, 326], [560, 982]]
+[thr=YoudenJ] thr=0.397 | Acc=80.2  MacroF1=78.5  BinF1(pos)=72.5
+ P/R per class -> 0(H): 88.9/80.5 , 1(AI): 66.6/79.6
+ CM [[TN FP],[FN TP]] = [[2533, 615], [315, 1227]]
+[thr=bestPosF1] thr=0.399 | Acc=80.3  MacroF1=78.6  BinF1(pos)=72.5
+ P/R per class -> 0(H): 88.8/80.8 , 1(AI): 66.9/79.2
+ CM [[TN FP],[FN TP]] = [[2543, 605], [320, 1222]]
+83.2,80.2,72.4,84.9,91.3,79.0,66.8,0.884,0.784
+Iteration: 100%|██████████| 63/63 [00:59<00:00,  1.07it/s]
+epoch 16: train_loss 0.015407535868386427
+Iteration: 100%|██████████| 8/8 [00:08<00:00,  1.10s/it]
+Validation Loss: 0.6093915365636349
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 82.388
+Macro F1 Score: 78.965
+Binary F1 Score (pos): 70.479
+Precision/Recall per class:
+83.8,91.4,78.5,63.9
+CM [[TN FP],[FN TP]] = [[2878, 270], [556, 986]]
+ROC_AUC (fpr-tpr): 0.890
+AUPRC: 0.795
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=81.8  MacroF1=78.3  BinF1(pos)=69.6
+ P/R per class -> 0(H): 83.5/90.8 , 1(AI): 77.2/63.4
+ CM [[TN FP],[FN TP]] = [[2859, 289], [565, 977]]
+[thr=YoudenJ] thr=0.351 | Acc=79.5  MacroF1=78.0  BinF1(pos)=72.5
+ P/R per class -> 0(H): 89.9/78.1 , 1(AI): 64.8/82.2
+ CM [[TN FP],[FN TP]] = [[2460, 688], [275, 1267]]
+[thr=bestPosF1] thr=0.384 | Acc=80.8  MacroF1=78.9  BinF1(pos)=72.7
+ P/R per class -> 0(H): 88.3/82.3 , 1(AI): 68.3/77.6
+ CM [[TN FP],[FN TP]] = [[2592, 556], [345, 1197]]
+82.4,79.0,70.5,83.8,91.4,78.5,63.9,0.890,0.795
+Iteration: 100%|██████████| 63/63 [00:57<00:00,  1.10it/s]
+epoch 17: train_loss 0.01527964517415043
+Iteration: 100%|██████████| 8/8 [00:08<00:00,  1.02s/it]
+Validation Loss: 0.6073472574353218
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 82.601
+Macro F1 Score: 79.611
+Binary F1 Score (pos): 71.804
+Precision/Recall per class:
+84.9,90.1,76.8,67.4
+CM [[TN FP],[FN TP]] = [[2835, 313], [503, 1039]]
+ROC_AUC (fpr-tpr): 0.892
+AUPRC: 0.803
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=82.4  MacroF1=79.1  BinF1(pos)=70.8
+ P/R per class -> 0(H): 84.2/90.8 , 1(AI): 77.6/65.2
+ CM [[TN FP],[FN TP]] = [[2858, 290], [537, 1005]]
+[thr=YoudenJ] thr=0.383 | Acc=81.0  MacroF1=79.3  BinF1(pos)=73.4
+ P/R per class -> 0(H): 89.1/81.7 , 1(AI): 68.1/79.6
+ CM [[TN FP],[FN TP]] = [[2573, 575], [314, 1228]]
+[thr=bestPosF1] thr=0.426 | Acc=82.4  MacroF1=80.2  BinF1(pos)=73.7
+ P/R per class -> 0(H): 87.6/86.0 , 1(AI): 72.4/75.1
+ CM [[TN FP],[FN TP]] = [[2706, 442], [384, 1158]]
+82.6,79.6,71.8,84.9,90.1,76.8,67.4,0.892,0.803
+Iteration: 100%|██████████| 63/63 [00:57<00:00,  1.10it/s]
+epoch 18: train_loss 0.015207356832448452
+Iteration: 100%|██████████| 8/8 [00:08<00:00,  1.07s/it]
+Validation Loss: 0.6036533825099468
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 83.731
+Macro F1 Score: 80.394
+Binary F1 Score (pos): 72.305
+Precision/Recall per class:
+84.3,93.1,82.1,64.6
+CM [[TN FP],[FN TP]] = [[2931, 217], [546, 996]]
+ROC_AUC (fpr-tpr): 0.891
+AUPRC: 0.800
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=81.7  MacroF1=77.8  BinF1(pos)=68.4
+ P/R per class -> 0(H): 82.5/92.3 , 1(AI): 79.4/60.1
+ CM [[TN FP],[FN TP]] = [[2907, 241], [615, 927]]
+[thr=YoudenJ] thr=0.379 | Acc=81.3  MacroF1=79.5  BinF1(pos)=73.4
+ P/R per class -> 0(H): 88.7/82.7 , 1(AI): 68.9/78.4
+ CM [[TN FP],[FN TP]] = [[2603, 545], [333, 1209]]
+[thr=bestPosF1] thr=0.390 | Acc=81.6  MacroF1=79.7  BinF1(pos)=73.4
+ P/R per class -> 0(H): 88.2/83.8 , 1(AI): 70.0/77.1
+ CM [[TN FP],[FN TP]] = [[2639, 509], [353, 1189]]
+83.7,80.4,72.3,84.3,93.1,82.1,64.6,0.891,0.800
+Iteration: 100%|██████████| 63/63 [00:57<00:00,  1.10it/s]
+epoch 19: train_loss 0.015055636047489114
+Iteration: 100%|██████████| 8/8 [00:08<00:00,  1.05s/it]
+Validation Loss: 0.5979264974594116
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 82.111
+Macro F1 Score: 78.188
+Binary F1 Score (pos): 68.937
+Precision/Recall per class:
+82.7,92.8,80.3,60.4
+CM [[TN FP],[FN TP]] = [[2920, 228], [611, 931]]
+ROC_AUC (fpr-tpr): 0.893
+AUPRC: 0.805
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=81.7  MacroF1=77.8  BinF1(pos)=68.5
+ P/R per class -> 0(H): 82.6/92.3 , 1(AI): 79.3/60.2
+ CM [[TN FP],[FN TP]] = [[2905, 243], [613, 929]]
+[thr=YoudenJ] thr=0.301 | Acc=79.1  MacroF1=77.9  BinF1(pos)=72.6
+ P/R per class -> 0(H): 90.7/76.8 , 1(AI): 63.9/83.9
+ CM [[TN FP],[FN TP]] = [[2419, 729], [249, 1293]]
+[thr=bestPosF1] thr=0.361 | Acc=81.0  MacroF1=79.0  BinF1(pos)=72.6
+ P/R per class -> 0(H): 88.0/83.0 , 1(AI): 68.9/76.8
+ CM [[TN FP],[FN TP]] = [[2612, 536], [357, 1185]]
+82.1,78.2,68.9,82.7,92.8,80.3,60.4,0.893,0.805
+Iteration: 100%|██████████| 63/63 [00:57<00:00,  1.10it/s]
+epoch 20: train_loss 0.01494684462095537
+Iteration: 100%|██████████| 8/8 [00:07<00:00,  1.03it/s]
+Epoch:  33%|███▎      | 20/60 [20:05<44:08, 66.21s/it]Validation Loss: 0.6036765724420547
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 82.900
+Macro F1 Score: 81.065
+Binary F1 Score (pos): 75.170
+Precision/Recall per class:
+89.1,84.9,71.9,78.7
+CM [[TN FP],[FN TP]] = [[2674, 474], [328, 1214]]
+ROC_AUC (fpr-tpr): 0.897
+AUPRC: 0.817
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=82.0  MacroF1=80.2  BinF1(pos)=74.1
+ P/R per class -> 0(H): 88.7/83.9 , 1(AI): 70.4/78.2
+ CM [[TN FP],[FN TP]] = [[2642, 506], [336, 1206]]
+[thr=YoudenJ] thr=0.499 | Acc=82.0  MacroF1=80.2  BinF1(pos)=74.1
+ P/R per class -> 0(H): 88.7/83.8 , 1(AI): 70.3/78.3
+ CM [[TN FP],[FN TP]] = [[2639, 509], [335, 1207]]
+[thr=bestPosF1] thr=0.522 | Acc=82.6  MacroF1=80.6  BinF1(pos)=74.3
+ P/R per class -> 0(H): 88.1/85.7 , 1(AI): 72.4/76.3
+ CM [[TN FP],[FN TP]] = [[2699, 449], [366, 1176]]
+82.9,81.1,75.2,89.1,84.9,71.9,78.7,0.897,0.817
+Iteration: 100%|██████████| 63/63 [00:56<00:00,  1.12it/s]
+epoch 21: train_loss 0.01490516701920165
+Iteration: 100%|██████████| 8/8 [00:08<00:00,  1.04s/it]
+Validation Loss: 0.5847701765596867
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 83.305
+Macro F1 Score: 80.287
+Binary F1 Score (pos): 72.574
+Precision/Recall per class:
+85.0,91.2,78.9,67.2
+CM [[TN FP],[FN TP]] = [[2871, 277], [506, 1036]]
+ROC_AUC (fpr-tpr): 0.896
+AUPRC: 0.813
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=82.7  MacroF1=79.5  BinF1(pos)=71.3
+ P/R per class -> 0(H): 84.4/91.1 , 1(AI): 78.3/65.5
+ CM [[TN FP],[FN TP]] = [[2868, 280], [532, 1010]]
+[thr=YoudenJ] thr=0.382 | Acc=81.3  MacroF1=79.7  BinF1(pos)=73.9
+ P/R per class -> 0(H): 89.6/81.6 , 1(AI): 68.2/80.6
+ CM [[TN FP],[FN TP]] = [[2569, 579], [299, 1243]]
+[thr=bestPosF1] thr=0.417 | Acc=82.3  MacroF1=80.3  BinF1(pos)=74.1
+ P/R per class -> 0(H): 88.3/84.8 , 1(AI): 71.3/77.0
+ CM [[TN FP],[FN TP]] = [[2670, 478], [354, 1188]]
+83.3,80.3,72.6,85.0,91.2,78.9,67.2,0.896,0.813
+Iteration: 100%|██████████| 63/63 [00:50<00:00,  1.26it/s]
+epoch 22: train_loss 0.01482449233945873
+Iteration: 100%|██████████| 8/8 [00:07<00:00,  1.08it/s]
+Validation Loss: 0.5834737606346607
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 83.902
+Macro F1 Score: 80.558
+Binary F1 Score (pos): 72.495
+Precision/Recall per class:
+84.3,93.4,82.7,64.5
+CM [[TN FP],[FN TP]] = [[2940, 208], [547, 995]]
+ROC_AUC (fpr-tpr): 0.896
+AUPRC: 0.816
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=82.9  MacroF1=79.3  BinF1(pos)=70.7
+ P/R per class -> 0(H): 83.6/92.8 , 1(AI): 81.1/62.7
+ CM [[TN FP],[FN TP]] = [[2922, 226], [575, 967]]
+[thr=YoudenJ] thr=0.377 | Acc=82.5  MacroF1=80.6  BinF1(pos)=74.4
+ P/R per class -> 0(H): 88.4/85.1 , 1(AI): 71.8/77.3
+ CM [[TN FP],[FN TP]] = [[2679, 469], [350, 1192]]
+[thr=bestPosF1] thr=0.392 | Acc=83.1  MacroF1=81.0  BinF1(pos)=74.6
+ P/R per class -> 0(H): 87.9/86.7 , 1(AI): 73.6/75.7
+ CM [[TN FP],[FN TP]] = [[2730, 418], [375, 1167]]
+83.9,80.6,72.5,84.3,93.4,82.7,64.5,0.896,0.816
+Iteration: 100%|██████████| 63/63 [00:40<00:00,  1.55it/s]
+epoch 23: train_loss 0.014670735831180262
+Iteration: 100%|██████████| 8/8 [00:07<00:00,  1.08it/s]
+Epoch:  38%|███▊      | 23/60 [22:57<36:21, 58.96s/it]Validation Loss: 0.5869634710252285
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 82.132
+Macro F1 Score: 77.652
+Binary F1 Score (pos): 67.645
+Precision/Recall per class:
+81.7,94.5,83.6,56.8
+CM [[TN FP],[FN TP]] = [[2976, 172], [666, 876]]
+ROC_AUC (fpr-tpr): 0.897
+AUPRC: 0.813
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=82.0  MacroF1=77.4  BinF1(pos)=67.3
+ P/R per class -> 0(H): 81.6/94.4 , 1(AI): 83.2/56.5
+ CM [[TN FP],[FN TP]] = [[2972, 176], [670, 872]]
+[thr=YoudenJ] thr=0.294 | Acc=79.6  MacroF1=78.4  BinF1(pos)=73.2
+ P/R per class -> 0(H): 91.1/77.2 , 1(AI): 64.5/84.6
+ CM [[TN FP],[FN TP]] = [[2429, 719], [237, 1305]]
+[thr=bestPosF1] thr=0.358 | Acc=82.3  MacroF1=80.3  BinF1(pos)=73.9
+ P/R per class -> 0(H): 88.0/85.4 , 1(AI): 71.8/76.2
+ CM [[TN FP],[FN TP]] = [[2687, 461], [367, 1175]]
+82.1,77.7,67.6,81.7,94.5,83.6,56.8,0.897,0.813
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.48it/s]
+epoch 24: train_loss 0.01456739508088619
+Iteration: 100%|██████████| 8/8 [00:07<00:00,  1.01it/s]
+Epoch:  40%|████      | 24/60 [23:47<33:53, 56.49s/it]Validation Loss: 0.6039235144853592
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 82.687
+Macro F1 Score: 81.217
+Binary F1 Score (pos): 75.962
+Precision/Recall per class:
+90.9,82.4,69.9,83.2
+CM [[TN FP],[FN TP]] = [[2595, 553], [259, 1283]]
+ROC_AUC (fpr-tpr): 0.898
+AUPRC: 0.822
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=80.4  MacroF1=79.0  BinF1(pos)=73.6
+ P/R per class -> 0(H): 90.5/79.0 , 1(AI): 66.0/83.1
+ CM [[TN FP],[FN TP]] = [[2487, 661], [260, 1282]]
+[thr=YoudenJ] thr=0.511 | Acc=80.7  MacroF1=79.2  BinF1(pos)=73.7
+ P/R per class -> 0(H): 90.2/79.9 , 1(AI): 66.7/82.4
+ CM [[TN FP],[FN TP]] = [[2514, 634], [272, 1270]]
+[thr=bestPosF1] thr=0.549 | Acc=82.0  MacroF1=80.1  BinF1(pos)=74.1
+ P/R per class -> 0(H): 88.7/83.8 , 1(AI): 70.3/78.3
+ CM [[TN FP],[FN TP]] = [[2638, 510], [335, 1207]]
+82.7,81.2,76.0,90.9,82.4,69.9,83.2,0.898,0.822
+Iteration: 100%|██████████| 63/63 [00:56<00:00,  1.11it/s]
+epoch 25: train_loss 0.014476970739899174
+Iteration: 100%|██████████| 8/8 [00:07<00:00,  1.01it/s]
+Validation Loss: 0.5704893805086613
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 83.966
+Macro F1 Score: 80.269
+Binary F1 Score (pos): 71.729
+Precision/Recall per class:
+83.5,94.8,85.3,61.9
+CM [[TN FP],[FN TP]] = [[2984, 164], [588, 954]]
+ROC_AUC (fpr-tpr): 0.905
+AUPRC: 0.833
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=83.2  MacroF1=79.2  BinF1(pos)=70.1
+ P/R per class -> 0(H): 82.8/94.6 , 1(AI): 84.4/59.9
+ CM [[TN FP],[FN TP]] = [[2978, 170], [619, 923]]
+[thr=YoudenJ] thr=0.314 | Acc=82.2  MacroF1=80.6  BinF1(pos)=75.1
+ P/R per class -> 0(H): 90.3/82.2 , 1(AI): 69.3/82.0
+ CM [[TN FP],[FN TP]] = [[2589, 559], [278, 1264]]
+[thr=bestPosF1] thr=0.371 | Acc=83.5  MacroF1=81.4  BinF1(pos)=75.2
+ P/R per class -> 0(H): 88.0/87.4 , 1(AI): 74.6/75.7
+ CM [[TN FP],[FN TP]] = [[2750, 398], [374, 1168]]
+84.0,80.3,71.7,83.5,94.8,85.3,61.9,0.905,0.833
+Iteration: 100%|██████████| 63/63 [00:40<00:00,  1.55it/s]
+epoch 26: train_loss 0.014390751852520875
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.22it/s]
+Validation Loss: 0.5623072311282158
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 84.456
+Macro F1 Score: 81.220
+Binary F1 Score (pos): 73.423
+Precision/Recall per class:
+84.7,93.8,83.8,65.3
+CM [[TN FP],[FN TP]] = [[2954, 194], [535, 1007]]
+ROC_AUC (fpr-tpr): 0.907
+AUPRC: 0.832
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=83.3  MacroF1=79.8  BinF1(pos)=71.5
+ P/R per class -> 0(H): 84.0/92.7 , 1(AI): 81.2/63.9
+ CM [[TN FP],[FN TP]] = [[2919, 229], [556, 986]]
+[thr=YoudenJ] thr=0.329 | Acc=81.9  MacroF1=80.5  BinF1(pos)=75.2
+ P/R per class -> 0(H): 91.0/81.1 , 1(AI): 68.4/83.5
+ CM [[TN FP],[FN TP]] = [[2553, 595], [254, 1288]]
+[thr=bestPosF1] thr=0.378 | Acc=83.2  MacroF1=81.3  BinF1(pos)=75.4
+ P/R per class -> 0(H): 89.0/85.6 , 1(AI): 72.7/78.4
+ CM [[TN FP],[FN TP]] = [[2694, 454], [333, 1209]]
+84.5,81.2,73.4,84.7,93.8,83.8,65.3,0.907,0.832
+Iteration: 100%|██████████| 63/63 [00:41<00:00,  1.51it/s]
+epoch 27: train_loss 0.014268161921155832
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.31it/s]
+Epoch:  45%|████▌     | 27/60 [26:29<29:26, 53.54s/it]Validation Loss: 0.5769278556108475
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 83.092
+Macro F1 Score: 80.967
+Binary F1 Score (pos): 74.608
+Precision/Recall per class:
+87.9,86.8,73.7,75.6
+CM [[TN FP],[FN TP]] = [[2732, 416], [377, 1165]]
+ROC_AUC (fpr-tpr): 0.902
+AUPRC: 0.833
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=83.2  MacroF1=81.1  BinF1(pos)=74.7
+ P/R per class -> 0(H): 87.8/87.1 , 1(AI): 74.1/75.2
+ CM [[TN FP],[FN TP]] = [[2743, 405], [382, 1160]]
+[thr=YoudenJ] thr=0.447 | Acc=82.0  MacroF1=80.3  BinF1(pos)=74.6
+ P/R per class -> 0(H): 89.6/82.8 , 1(AI): 69.6/80.4
+ CM [[TN FP],[FN TP]] = [[2606, 542], [302, 1240]]
+[thr=bestPosF1] thr=0.471 | Acc=82.8  MacroF1=80.9  BinF1(pos)=74.9
+ P/R per class -> 0(H): 88.8/85.0 , 1(AI): 71.9/78.1
+ CM [[TN FP],[FN TP]] = [[2676, 472], [337, 1205]]
+83.1,81.0,74.6,87.9,86.8,73.7,75.6,0.902,0.833
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.49it/s]
+epoch 28: train_loss 0.014161346110677908
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.26it/s]
+Epoch:  47%|████▋     | 28/60 [27:18<27:47, 52.10s/it]Validation Loss: 0.562773086130619
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 84.051
+Macro F1 Score: 81.059
+Binary F1 Score (pos): 73.531
+Precision/Recall per class:
+85.2,92.2,80.9,67.4
+CM [[TN FP],[FN TP]] = [[2903, 245], [503, 1039]]
+ROC_AUC (fpr-tpr): 0.904
+AUPRC: 0.831
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=83.4  MacroF1=80.3  BinF1(pos)=72.4
+ P/R per class -> 0(H): 84.8/91.7 , 1(AI): 79.7/66.4
+ CM [[TN FP],[FN TP]] = [[2887, 261], [518, 1024]]
+[thr=YoudenJ] thr=0.342 | Acc=81.0  MacroF1=79.6  BinF1(pos)=74.3
+ P/R per class -> 0(H): 90.9/79.6 , 1(AI): 66.8/83.8
+ CM [[TN FP],[FN TP]] = [[2505, 643], [250, 1292]]
+[thr=bestPosF1] thr=0.401 | Acc=82.8  MacroF1=80.8  BinF1(pos)=74.8
+ P/R per class -> 0(H): 88.6/85.3 , 1(AI): 72.1/77.6
+ CM [[TN FP],[FN TP]] = [[2686, 462], [346, 1196]]
+84.1,81.1,73.5,85.2,92.2,80.9,67.4,0.904,0.831
+Iteration: 100%|██████████| 63/63 [00:39<00:00,  1.58it/s]
+epoch 29: train_loss 0.014196142923855593
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.15it/s]
+Validation Loss: 0.5619942806661129
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 83.070
+Macro F1 Score: 81.136
+Binary F1 Score (pos): 75.094
+Precision/Recall per class:
+88.7,85.7,72.7,77.6
+CM [[TN FP],[FN TP]] = [[2699, 449], [345, 1197]]
+ROC_AUC (fpr-tpr): 0.907
+AUPRC: 0.839
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=83.3  MacroF1=81.2  BinF1(pos)=75.0
+ P/R per class -> 0(H): 88.0/87.0 , 1(AI): 74.1/75.9
+ CM [[TN FP],[FN TP]] = [[2739, 409], [372, 1170]]
+[thr=YoudenJ] thr=0.435 | Acc=81.9  MacroF1=80.4  BinF1(pos)=74.9
+ P/R per class -> 0(H): 90.5/81.6 , 1(AI): 68.7/82.4
+ CM [[TN FP],[FN TP]] = [[2569, 579], [271, 1271]]
+[thr=bestPosF1] thr=0.470 | Acc=82.9  MacroF1=81.1  BinF1(pos)=75.2
+ P/R per class -> 0(H): 89.1/84.9 , 1(AI): 71.9/78.8
+ CM [[TN FP],[FN TP]] = [[2674, 474], [327, 1215]]
+83.1,81.1,75.1,88.7,85.7,72.7,77.6,0.907,0.839
+Iteration: 100%|██████████| 63/63 [00:41<00:00,  1.51it/s]
+epoch 30: train_loss 0.014097080565989017
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.33it/s]
+Validation Loss: 0.5585399158298969
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 83.945
+Macro F1 Score: 80.890
+Binary F1 Score (pos): 73.250
+Precision/Recall per class:
+85.0,92.3,81.0,66.9
+CM [[TN FP],[FN TP]] = [[2906, 242], [511, 1031]]
+ROC_AUC (fpr-tpr): 0.906
+AUPRC: 0.836
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=83.5  MacroF1=80.4  BinF1(pos)=72.7
+ P/R per class -> 0(H): 84.9/91.8 , 1(AI): 79.9/66.6
+ CM [[TN FP],[FN TP]] = [[2890, 258], [515, 1027]]
+[thr=YoudenJ] thr=0.352 | Acc=82.5  MacroF1=80.9  BinF1(pos)=75.4
+ P/R per class -> 0(H): 90.3/82.7 , 1(AI): 69.9/81.9
+ CM [[TN FP],[FN TP]] = [[2604, 544], [279, 1263]]
+[thr=bestPosF1] thr=0.352 | Acc=82.5  MacroF1=80.9  BinF1(pos)=75.4
+ P/R per class -> 0(H): 90.3/82.7 , 1(AI): 69.9/81.9
+ CM [[TN FP],[FN TP]] = [[2604, 544], [279, 1263]]
+83.9,80.9,73.3,85.0,92.3,81.0,66.9,0.906,0.836
+Iteration: 100%|██████████| 63/63 [00:55<00:00,  1.14it/s]
+epoch 31: train_loss 0.01398000650344387
+Iteration: 100%|██████████| 8/8 [00:07<00:00,  1.07it/s]
+Epoch:  52%|█████▏    | 31/60 [29:57<26:01, 53.85s/it]Validation Loss: 0.5595736838877201
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 84.670
+Macro F1 Score: 81.389
+Binary F1 Score (pos): 73.576
+Precision/Recall per class:
+84.6,94.3,84.9,64.9
+CM [[TN FP],[FN TP]] = [[2970, 178], [541, 1001]]
+ROC_AUC (fpr-tpr): 0.908
+AUPRC: 0.842
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=83.9  MacroF1=80.4  BinF1(pos)=72.1
+ P/R per class -> 0(H): 83.9/94.0 , 1(AI): 83.8/63.3
+ CM [[TN FP],[FN TP]] = [[2960, 188], [566, 976]]
+[thr=YoudenJ] thr=0.301 | Acc=81.6  MacroF1=80.3  BinF1(pos)=75.1
+ P/R per class -> 0(H): 91.2/80.4 , 1(AI): 67.8/84.1
+ CM [[TN FP],[FN TP]] = [[2531, 617], [245, 1297]]
+[thr=bestPosF1] thr=0.356 | Acc=83.1  MacroF1=81.2  BinF1(pos)=75.2
+ P/R per class -> 0(H): 88.9/85.6 , 1(AI): 72.6/78.1
+ CM [[TN FP],[FN TP]] = [[2694, 454], [338, 1204]]
+84.7,81.4,73.6,84.6,94.3,84.9,64.9,0.908,0.842
+Iteration: 100%|██████████| 63/63 [00:54<00:00,  1.16it/s]
+epoch 32: train_loss 0.014002648877009513
+Iteration: 100%|██████████| 8/8 [00:07<00:00,  1.03it/s]
+Validation Loss: 0.5517152659595013
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 84.328
+Macro F1 Score: 81.611
+Binary F1 Score (pos): 74.541
+Precision/Recall per class:
+86.1,91.5,80.0,69.8
+CM [[TN FP],[FN TP]] = [[2879, 269], [466, 1076]]
+ROC_AUC (fpr-tpr): 0.908
+AUPRC: 0.839
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=83.7  MacroF1=80.8  BinF1(pos)=73.5
+ P/R per class -> 0(H): 85.6/91.0 , 1(AI): 79.0/68.7
+ CM [[TN FP],[FN TP]] = [[2866, 282], [483, 1059]]
+[thr=YoudenJ] thr=0.319 | Acc=80.8  MacroF1=79.6  BinF1(pos)=74.8
+ P/R per class -> 0(H): 92.3/77.8 , 1(AI): 65.7/86.8
+ CM [[TN FP],[FN TP]] = [[2450, 698], [203, 1339]]
+[thr=bestPosF1] thr=0.364 | Acc=82.0  MacroF1=80.5  BinF1(pos)=75.0
+ P/R per class -> 0(H): 90.5/81.7 , 1(AI): 68.9/82.4
+ CM [[TN FP],[FN TP]] = [[2573, 575], [271, 1271]]
+84.3,81.6,74.5,86.1,91.5,80.0,69.8,0.908,0.839
+Iteration: 100%|██████████| 63/63 [00:55<00:00,  1.14it/s]
+epoch 33: train_loss 0.013888337871148473
+Iteration: 100%|██████████| 8/8 [00:08<00:00,  1.07s/it]
+Epoch:  55%|█████▌    | 33/60 [32:03<26:25, 58.71s/it]Validation Loss: 0.5556795820593834
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 84.584
+Macro F1 Score: 82.562
+Binary F1 Score (pos): 76.625
+Precision/Recall per class:
+88.6,88.4,76.4,76.8
+CM [[TN FP],[FN TP]] = [[2782, 366], [357, 1185]]
+ROC_AUC (fpr-tpr): 0.909
+AUPRC: 0.844
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=83.3  MacroF1=81.1  BinF1(pos)=74.5
+ P/R per class -> 0(H): 87.3/88.0 , 1(AI): 75.1/73.8
+ CM [[TN FP],[FN TP]] = [[2771, 377], [404, 1138]]
+[thr=YoudenJ] thr=0.408 | Acc=82.4  MacroF1=81.0  BinF1(pos)=75.7
+ P/R per class -> 0(H): 90.9/82.0 , 1(AI): 69.4/83.3
+ CM [[TN FP],[FN TP]] = [[2581, 567], [258, 1284]]
+[thr=bestPosF1] thr=0.435 | Acc=83.0  MacroF1=81.3  BinF1(pos)=75.7
+ P/R per class -> 0(H): 89.9/84.0 , 1(AI): 71.2/80.8
+ CM [[TN FP],[FN TP]] = [[2645, 503], [296, 1246]]
+84.6,82.6,76.6,88.6,88.4,76.4,76.8,0.909,0.844
+Iteration: 100%|██████████| 63/63 [00:56<00:00,  1.12it/s]
+epoch 34: train_loss 0.013744644613729583
+Iteration: 100%|██████████| 8/8 [00:08<00:00,  1.01s/it]
+Validation Loss: 0.5442622788250446
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 84.627
+Macro F1 Score: 81.695
+Binary F1 Score (pos): 74.369
+Precision/Recall per class:
+85.5,92.9,82.3,67.8
+CM [[TN FP],[FN TP]] = [[2923, 225], [496, 1046]]
+ROC_AUC (fpr-tpr): 0.911
+AUPRC: 0.844
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=84.4  MacroF1=81.6  BinF1(pos)=74.4
+ P/R per class -> 0(H): 85.8/92.0 , 1(AI): 80.8/68.9
+ CM [[TN FP],[FN TP]] = [[2895, 253], [479, 1063]]
+[thr=YoudenJ] thr=0.358 | Acc=82.0  MacroF1=80.5  BinF1(pos)=75.1
+ P/R per class -> 0(H): 90.6/81.6 , 1(AI): 68.8/82.6
+ CM [[TN FP],[FN TP]] = [[2570, 578], [268, 1274]]
+[thr=bestPosF1] thr=0.438 | Acc=84.3  MacroF1=82.2  BinF1(pos)=76.0
+ P/R per class -> 0(H): 88.1/88.5 , 1(AI): 76.4/75.6
+ CM [[TN FP],[FN TP]] = [[2787, 361], [376, 1166]]
+84.6,81.7,74.4,85.5,92.9,82.3,67.8,0.911,0.844
+Iteration: 100%|██████████| 63/63 [00:56<00:00,  1.11it/s]
+epoch 35: train_loss 0.013683470424323801
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.21it/s]
+Epoch:  58%|█████▊    | 35/60 [34:12<25:37, 61.51s/it]Validation Loss: 0.5509900823235512
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 85.224
+Macro F1 Score: 82.614
+Binary F1 Score (pos): 75.879
+Precision/Recall per class:
+86.5,92.3,81.9,70.7
+CM [[TN FP],[FN TP]] = [[2907, 241], [452, 1090]]
+ROC_AUC (fpr-tpr): 0.910
+AUPRC: 0.846
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=84.2  MacroF1=81.4  BinF1(pos)=74.2
+ P/R per class -> 0(H): 85.8/91.6 , 1(AI): 80.2/69.1
+ CM [[TN FP],[FN TP]] = [[2884, 264], [476, 1066]]
+[thr=YoudenJ] thr=0.381 | Acc=82.8  MacroF1=81.2  BinF1(pos)=75.6
+ P/R per class -> 0(H): 90.1/83.5 , 1(AI): 70.8/81.3
+ CM [[TN FP],[FN TP]] = [[2630, 518], [289, 1253]]
+[thr=bestPosF1] thr=0.381 | Acc=82.8  MacroF1=81.2  BinF1(pos)=75.6
+ P/R per class -> 0(H): 90.1/83.5 , 1(AI): 70.8/81.3
+ CM [[TN FP],[FN TP]] = [[2630, 518], [289, 1253]]
+85.2,82.6,75.9,86.5,92.3,81.9,70.7,0.910,0.846
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.47it/s]
+epoch 36: train_loss 0.013641278702943098
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.29it/s]
+Validation Loss: 0.5441718846559525
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 84.435
+Macro F1 Score: 81.732
+Binary F1 Score (pos): 74.705
+Precision/Recall per class:
+86.1,91.6,80.2,69.9
+CM [[TN FP],[FN TP]] = [[2882, 266], [464, 1078]]
+ROC_AUC (fpr-tpr): 0.910
+AUPRC: 0.844
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=83.7  MacroF1=80.9  BinF1(pos)=73.7
+ P/R per class -> 0(H): 85.8/90.7 , 1(AI): 78.5/69.5
+ CM [[TN FP],[FN TP]] = [[2854, 294], [471, 1071]]
+[thr=YoudenJ] thr=0.340 | Acc=81.5  MacroF1=80.2  BinF1(pos)=75.3
+ P/R per class -> 0(H): 91.9/79.5 , 1(AI): 67.1/85.6
+ CM [[TN FP],[FN TP]] = [[2502, 646], [222, 1320]]
+[thr=bestPosF1] thr=0.366 | Acc=82.3  MacroF1=80.8  BinF1(pos)=75.5
+ P/R per class -> 0(H): 90.9/81.8 , 1(AI): 69.1/83.2
+ CM [[TN FP],[FN TP]] = [[2575, 573], [259, 1283]]
+84.4,81.7,74.7,86.1,91.6,80.2,69.9,0.910,0.844
+Iteration: 100%|██████████| 63/63 [00:43<00:00,  1.46it/s]
+epoch 37: train_loss 0.013597047532952967
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.24it/s]
+Epoch:  62%|██████▏   | 37/60 [35:51<21:16, 55.52s/it]Validation Loss: 0.5519853383302689
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 83.945
+Macro F1 Score: 80.441
+Binary F1 Score (pos): 72.163
+Precision/Recall per class:
+84.0,94.1,83.9,63.3
+CM [[TN FP],[FN TP]] = [[2961, 187], [566, 976]]
+ROC_AUC (fpr-tpr): 0.911
+AUPRC: 0.846
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=83.9  MacroF1=80.3  BinF1(pos)=72.0
+ P/R per class -> 0(H): 83.9/94.0 , 1(AI): 83.7/63.2
+ CM [[TN FP],[FN TP]] = [[2959, 189], [568, 974]]
+[thr=YoudenJ] thr=0.273 | Acc=82.1  MacroF1=80.7  BinF1(pos)=75.5
+ P/R per class -> 0(H): 91.2/81.2 , 1(AI): 68.6/84.0
+ CM [[TN FP],[FN TP]] = [[2555, 593], [246, 1296]]
+[thr=bestPosF1] thr=0.273 | Acc=82.1  MacroF1=80.7  BinF1(pos)=75.5
+ P/R per class -> 0(H): 91.2/81.2 , 1(AI): 68.6/84.0
+ CM [[TN FP],[FN TP]] = [[2555, 593], [246, 1296]]
+83.9,80.4,72.2,84.0,94.1,83.9,63.3,0.911,0.846
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.49it/s]
+epoch 38: train_loss 0.01354633289433661
+Iteration: 100%|██████████| 8/8 [00:07<00:00,  1.11it/s]
+Validation Loss: 0.5375764332711697
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 84.797
+Macro F1 Score: 82.289
+Binary F1 Score (pos): 75.624
+Precision/Recall per class:
+86.8,91.2,80.0,71.7
+CM [[TN FP],[FN TP]] = [[2871, 277], [436, 1106]]
+ROC_AUC (fpr-tpr): 0.914
+AUPRC: 0.853
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=84.4  MacroF1=81.8  BinF1(pos)=74.9
+ P/R per class -> 0(H): 86.5/90.9 , 1(AI): 79.3/71.0
+ CM [[TN FP],[FN TP]] = [[2862, 286], [447, 1095]]
+[thr=YoudenJ] thr=0.360 | Acc=82.4  MacroF1=81.0  BinF1(pos)=75.9
+ P/R per class -> 0(H): 91.3/81.6 , 1(AI): 69.2/84.0
+ CM [[TN FP],[FN TP]] = [[2570, 578], [246, 1296]]
+[thr=bestPosF1] thr=0.383 | Acc=83.0  MacroF1=81.5  BinF1(pos)=76.1
+ P/R per class -> 0(H): 90.6/83.4 , 1(AI): 70.8/82.3
+ CM [[TN FP],[FN TP]] = [[2624, 524], [273, 1269]]
+84.8,82.3,75.6,86.8,91.2,80.0,71.7,0.914,0.853
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.48it/s]
+epoch 39: train_loss 0.013475136284435552
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.24it/s]
+Epoch:  65%|██████▌   | 39/60 [37:31<18:23, 52.57s/it]Validation Loss: 0.5378581173717976
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 85.245
+Macro F1 Score: 82.363
+Binary F1 Score (pos): 75.233
+Precision/Recall per class:
+85.7,93.6,83.9,68.2
+CM [[TN FP],[FN TP]] = [[2947, 201], [491, 1051]]
+ROC_AUC (fpr-tpr): 0.913
+AUPRC: 0.853
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=84.3  MacroF1=81.3  BinF1(pos)=73.7
+ P/R per class -> 0(H): 85.2/92.6 , 1(AI): 81.7/67.2
+ CM [[TN FP],[FN TP]] = [[2916, 232], [506, 1036]]
+[thr=YoudenJ] thr=0.325 | Acc=82.1  MacroF1=80.8  BinF1(pos)=75.7
+ P/R per class -> 0(H): 91.5/80.8 , 1(AI): 68.4/84.7
+ CM [[TN FP],[FN TP]] = [[2545, 603], [236, 1306]]
+[thr=bestPosF1] thr=0.380 | Acc=83.6  MacroF1=81.9  BinF1(pos)=76.3
+ P/R per class -> 0(H): 89.7/85.3 , 1(AI): 72.8/80.1
+ CM [[TN FP],[FN TP]] = [[2686, 462], [307, 1235]]
+85.2,82.4,75.2,85.7,93.6,83.9,68.2,0.913,0.853
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.49it/s]
+epoch 40: train_loss 0.013389821578231122
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.28it/s]
+Epoch:  67%|██████▋   | 40/60 [38:20<17:08, 51.41s/it]Validation Loss: 0.5433348752558231
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 83.838
+Macro F1 Score: 80.298
+Binary F1 Score (pos): 71.947
+Precision/Recall per class:
+83.9,94.0,83.8,63.0
+CM [[TN FP],[FN TP]] = [[2960, 188], [570, 972]]
+ROC_AUC (fpr-tpr): 0.913
+AUPRC: 0.850
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=84.2  MacroF1=80.8  BinF1(pos)=72.6
+ P/R per class -> 0(H): 84.1/94.2 , 1(AI): 84.4/63.7
+ CM [[TN FP],[FN TP]] = [[2966, 182], [559, 983]]
+[thr=YoudenJ] thr=0.259 | Acc=81.4  MacroF1=80.1  BinF1(pos)=75.2
+ P/R per class -> 0(H): 92.0/79.1 , 1(AI): 66.8/86.1
+ CM [[TN FP],[FN TP]] = [[2489, 659], [215, 1327]]
+[thr=bestPosF1] thr=0.313 | Acc=82.8  MacroF1=81.2  BinF1(pos)=75.7
+ P/R per class -> 0(H): 90.2/83.5 , 1(AI): 70.8/81.5
+ CM [[TN FP],[FN TP]] = [[2629, 519], [286, 1256]]
+83.8,80.3,71.9,83.9,94.0,83.8,63.0,0.913,0.850
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.50it/s]
+epoch 41: train_loss 0.013394925891170426
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.22it/s]
+Validation Loss: 0.5373986922204494
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 84.691
+Macro F1 Score: 82.406
+Binary F1 Score (pos): 76.067
+Precision/Recall per class:
+87.6,89.9,78.3,74.0
+CM [[TN FP],[FN TP]] = [[2831, 317], [401, 1141]]
+ROC_AUC (fpr-tpr): 0.913
+AUPRC: 0.852
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=83.8  MacroF1=81.4  BinF1(pos)=74.5
+ P/R per class -> 0(H): 86.7/89.6 , 1(AI): 77.3/72.0
+ CM [[TN FP],[FN TP]] = [[2822, 326], [432, 1110]]
+[thr=YoudenJ] thr=0.365 | Acc=82.1  MacroF1=80.7  BinF1(pos)=75.5
+ P/R per class -> 0(H): 91.2/81.1 , 1(AI): 68.5/84.0
+ CM [[TN FP],[FN TP]] = [[2553, 595], [246, 1296]]
+[thr=bestPosF1] thr=0.448 | Acc=83.7  MacroF1=81.7  BinF1(pos)=75.7
+ P/R per class -> 0(H): 88.6/86.8 , 1(AI): 74.2/77.2
+ CM [[TN FP],[FN TP]] = [[2734, 414], [352, 1190]]
+84.7,82.4,76.1,87.6,89.9,78.3,74.0,0.913,0.852
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.47it/s]
+epoch 42: train_loss 0.013296923895795194
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.27it/s]
+Validation Loss: 0.5331593602895737
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 84.797
+Macro F1 Score: 82.182
+Binary F1 Score (pos): 75.354
+Precision/Recall per class:
+86.5,91.7,80.7,70.7
+CM [[TN FP],[FN TP]] = [[2887, 261], [452, 1090]]
+ROC_AUC (fpr-tpr): 0.914
+AUPRC: 0.853
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=84.0  MacroF1=81.3  BinF1(pos)=74.2
+ P/R per class -> 0(H): 86.1/90.8 , 1(AI): 78.8/70.1
+ CM [[TN FP],[FN TP]] = [[2858, 290], [461, 1081]]
+[thr=YoudenJ] thr=0.345 | Acc=82.2  MacroF1=80.9  BinF1(pos)=75.8
+ P/R per class -> 0(H): 91.6/80.9 , 1(AI): 68.5/84.9
+ CM [[TN FP],[FN TP]] = [[2547, 601], [233, 1309]]
+[thr=bestPosF1] thr=0.372 | Acc=82.8  MacroF1=81.3  BinF1(pos)=75.9
+ P/R per class -> 0(H): 90.5/83.2 , 1(AI): 70.5/82.1
+ CM [[TN FP],[FN TP]] = [[2618, 530], [276, 1266]]
+84.8,82.2,75.4,86.5,91.7,80.7,70.7,0.914,0.853
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.48it/s]
+epoch 43: train_loss 0.013225060266753038
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.27it/s]
+Epoch:  72%|███████▏  | 43/60 [40:48<14:11, 50.08s/it]Validation Loss: 0.5397079773247242
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 85.160
+Macro F1 Score: 83.238
+Binary F1 Score (pos): 77.563
+Precision/Recall per class:
+89.2,88.7,77.1,78.0
+CM [[TN FP],[FN TP]] = [[2791, 357], [339, 1203]]
+ROC_AUC (fpr-tpr): 0.912
+AUPRC: 0.853
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=83.6  MacroF1=81.5  BinF1(pos)=75.3
+ P/R per class -> 0(H): 88.1/87.4 , 1(AI): 74.6/75.9
+ CM [[TN FP],[FN TP]] = [[2750, 398], [371, 1171]]
+[thr=YoudenJ] thr=0.372 | Acc=81.2  MacroF1=80.0  BinF1(pos)=75.2
+ P/R per class -> 0(H): 92.3/78.6 , 1(AI): 66.5/86.6
+ CM [[TN FP],[FN TP]] = [[2474, 674], [207, 1335]]
+[thr=bestPosF1] thr=0.466 | Acc=83.3  MacroF1=81.5  BinF1(pos)=75.7
+ P/R per class -> 0(H): 89.3/85.4 , 1(AI): 72.6/79.1
+ CM [[TN FP],[FN TP]] = [[2687, 461], [322, 1220]]
+85.2,83.2,77.6,89.2,88.7,77.1,78.0,0.912,0.853
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.49it/s]
+epoch 44: train_loss 0.013206649172518934
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.28it/s]
+Epoch:  73%|███████▎  | 44/60 [41:37<13:14, 49.68s/it]Validation Loss: 0.537379115819931
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 85.245
+Macro F1 Score: 82.909
+Binary F1 Score (pos): 76.590
+Precision/Recall per class:
+87.5,91.0,80.1,73.4
+CM [[TN FP],[FN TP]] = [[2866, 282], [410, 1132]]
+ROC_AUC (fpr-tpr): 0.914
+AUPRC: 0.854
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=84.1  MacroF1=81.6  BinF1(pos)=74.8
+ P/R per class -> 0(H): 86.7/90.0 , 1(AI): 77.9/71.9
+ CM [[TN FP],[FN TP]] = [[2834, 314], [434, 1108]]
+[thr=YoudenJ] thr=0.355 | Acc=82.0  MacroF1=80.7  BinF1(pos)=75.7
+ P/R per class -> 0(H): 91.6/80.7 , 1(AI): 68.2/84.9
+ CM [[TN FP],[FN TP]] = [[2539, 609], [233, 1309]]
+[thr=bestPosF1] thr=0.355 | Acc=82.0  MacroF1=80.7  BinF1(pos)=75.7
+ P/R per class -> 0(H): 91.6/80.7 , 1(AI): 68.2/84.9
+ CM [[TN FP],[FN TP]] = [[2539, 609], [233, 1309]]
+85.2,82.9,76.6,87.5,91.0,80.1,73.4,0.914,0.854
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.49it/s]
+epoch 45: train_loss 0.013091360795355979
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.27it/s]
+Epoch:  75%|███████▌  | 45/60 [42:26<12:20, 49.37s/it]Validation Loss: 0.5343537218868732
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 85.245
+Macro F1 Score: 83.329
+Binary F1 Score (pos): 77.677
+Precision/Recall per class:
+89.2,88.8,77.3,78.1
+CM [[TN FP],[FN TP]] = [[2794, 354], [338, 1204]]
+ROC_AUC (fpr-tpr): 0.914
+AUPRC: 0.854
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=83.6  MacroF1=81.6  BinF1(pos)=75.5
+ P/R per class -> 0(H): 88.4/87.0 , 1(AI): 74.3/76.7
+ CM [[TN FP],[FN TP]] = [[2738, 410], [359, 1183]]
+[thr=YoudenJ] thr=0.415 | Acc=82.6  MacroF1=81.2  BinF1(pos)=76.1
+ P/R per class -> 0(H): 91.3/81.9 , 1(AI): 69.4/84.1
+ CM [[TN FP],[FN TP]] = [[2577, 571], [245, 1297]]
+[thr=bestPosF1] thr=0.415 | Acc=82.6  MacroF1=81.2  BinF1(pos)=76.1
+ P/R per class -> 0(H): 91.3/81.9 , 1(AI): 69.4/84.1
+ CM [[TN FP],[FN TP]] = [[2577, 571], [245, 1297]]
+85.2,83.3,77.7,89.2,88.8,77.3,78.1,0.914,0.854
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.49it/s]
+epoch 46: train_loss 0.013124149780543078
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.29it/s]
+Validation Loss: 0.5328479930758476
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 85.224
+Macro F1 Score: 82.525
+Binary F1 Score (pos): 75.659
+Precision/Recall per class:
+86.3,92.8,82.5,69.8
+CM [[TN FP],[FN TP]] = [[2920, 228], [465, 1077]]
+ROC_AUC (fpr-tpr): 0.913
+AUPRC: 0.853
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=84.3  MacroF1=81.7  BinF1(pos)=74.7
+ P/R per class -> 0(H): 86.2/91.3 , 1(AI): 79.7/70.2
+ CM [[TN FP],[FN TP]] = [[2873, 275], [459, 1083]]
+[thr=YoudenJ] thr=0.316 | Acc=81.7  MacroF1=80.5  BinF1(pos)=75.7
+ P/R per class -> 0(H): 92.2/79.5 , 1(AI): 67.4/86.3
+ CM [[TN FP],[FN TP]] = [[2503, 645], [211, 1331]]
+[thr=bestPosF1] thr=0.417 | Acc=83.7  MacroF1=81.7  BinF1(pos)=75.8
+ P/R per class -> 0(H): 88.7/86.7 , 1(AI): 74.1/77.5
+ CM [[TN FP],[FN TP]] = [[2730, 418], [347, 1195]]
+85.2,82.5,75.7,86.3,92.8,82.5,69.8,0.913,0.853
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.48it/s]
+epoch 47: train_loss 0.013023103749941266
+Iteration: 100%|██████████| 8/8 [00:07<00:00,  1.13it/s]
+Epoch:  78%|███████▊  | 47/60 [44:05<10:43, 49.51s/it]Validation Loss: 0.5339338816702366
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 85.373
+Macro F1 Score: 83.179
+Binary F1 Score (pos): 77.103
+Precision/Recall per class:
+88.0,90.5,79.4,74.9
+CM [[TN FP],[FN TP]] = [[2849, 299], [387, 1155]]
+ROC_AUC (fpr-tpr): 0.914
+AUPRC: 0.855
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=83.8  MacroF1=81.4  BinF1(pos)=74.6
+ P/R per class -> 0(H): 86.9/89.4 , 1(AI): 77.0/72.4
+ CM [[TN FP],[FN TP]] = [[2815, 333], [426, 1116]]
+[thr=YoudenJ] thr=0.365 | Acc=82.3  MacroF1=80.9  BinF1(pos)=75.7
+ P/R per class -> 0(H): 91.2/81.4 , 1(AI): 68.9/83.9
+ CM [[TN FP],[FN TP]] = [[2564, 584], [248, 1294]]
+[thr=bestPosF1] thr=0.365 | Acc=82.3  MacroF1=80.9  BinF1(pos)=75.7
+ P/R per class -> 0(H): 91.2/81.4 , 1(AI): 68.9/83.9
+ CM [[TN FP],[FN TP]] = [[2564, 584], [248, 1294]]
+85.4,83.2,77.1,88.0,90.5,79.4,74.9,0.914,0.855
+Iteration: 100%|██████████| 63/63 [00:41<00:00,  1.52it/s]
+epoch 48: train_loss 0.013005323693274505
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.21it/s]
+Validation Loss: 0.5316909998655319
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 85.800
+Macro F1 Score: 83.216
+Binary F1 Score (pos): 76.632
+Precision/Recall per class:
+86.7,93.1,83.5,70.8
+CM [[TN FP],[FN TP]] = [[2932, 216], [450, 1092]]
+ROC_AUC (fpr-tpr): 0.914
+AUPRC: 0.854
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=84.2  MacroF1=81.3  BinF1(pos)=74.0
+ P/R per class -> 0(H): 85.6/92.0 , 1(AI): 80.8/68.3
+ CM [[TN FP],[FN TP]] = [[2897, 251], [489, 1053]]
+[thr=YoudenJ] thr=0.311 | Acc=82.0  MacroF1=80.7  BinF1(pos)=75.8
+ P/R per class -> 0(H): 92.1/80.1 , 1(AI): 67.8/85.9
+ CM [[TN FP],[FN TP]] = [[2520, 628], [217, 1325]]
+[thr=bestPosF1] thr=0.375 | Acc=83.4  MacroF1=81.7  BinF1(pos)=76.2
+ P/R per class -> 0(H): 89.9/84.9 , 1(AI): 72.3/80.5
+ CM [[TN FP],[FN TP]] = [[2672, 476], [301, 1241]]
+85.8,83.2,76.6,86.7,93.1,83.5,70.8,0.914,0.854
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.49it/s]
+epoch 49: train_loss 0.013021251896307581
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.15it/s]
+Validation Loss: 0.527890995144844
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 85.245
+Macro F1 Score: 82.775
+Binary F1 Score (pos): 76.253
+Precision/Recall per class:
+87.0,91.7,81.0,72.0
+CM [[TN FP],[FN TP]] = [[2887, 261], [431, 1111]]
+ROC_AUC (fpr-tpr): 0.914
+AUPRC: 0.855
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=83.9  MacroF1=81.3  BinF1(pos)=74.3
+ P/R per class -> 0(H): 86.3/90.2 , 1(AI): 78.1/70.8
+ CM [[TN FP],[FN TP]] = [[2841, 307], [450, 1092]]
+[thr=YoudenJ] thr=0.345 | Acc=82.3  MacroF1=81.0  BinF1(pos)=76.0
+ P/R per class -> 0(H): 91.7/81.1 , 1(AI): 68.7/85.0
+ CM [[TN FP],[FN TP]] = [[2552, 596], [232, 1310]]
+[thr=bestPosF1] thr=0.349 | Acc=82.4  MacroF1=81.1  BinF1(pos)=76.0
+ P/R per class -> 0(H): 91.6/81.3 , 1(AI): 69.0/84.7
+ CM [[TN FP],[FN TP]] = [[2560, 588], [236, 1306]]
+85.2,82.8,76.3,87.0,91.7,81.0,72.0,0.914,0.855
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.48it/s]
+epoch 50: train_loss 0.012915502006690654
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.20it/s]
+Epoch:  83%|████████▎ | 50/60 [46:33<08:14, 49.48s/it]Validation Loss: 0.5288000553846359
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 85.672
+Macro F1 Score: 83.125
+Binary F1 Score (pos): 76.569
+Precision/Recall per class:
+86.8,92.8,82.8,71.2
+CM [[TN FP],[FN TP]] = [[2920, 228], [444, 1098]]
+ROC_AUC (fpr-tpr): 0.914
+AUPRC: 0.854
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=84.2  MacroF1=81.4  BinF1(pos)=74.1
+ P/R per class -> 0(H): 85.7/91.8 , 1(AI): 80.5/68.7
+ CM [[TN FP],[FN TP]] = [[2891, 257], [483, 1059]]
+[thr=YoudenJ] thr=0.299 | Acc=81.7  MacroF1=80.5  BinF1(pos)=75.6
+ P/R per class -> 0(H): 92.3/79.3 , 1(AI): 67.2/86.5
+ CM [[TN FP],[FN TP]] = [[2497, 651], [208, 1334]]
+[thr=bestPosF1] thr=0.352 | Acc=82.7  MacroF1=81.2  BinF1(pos)=75.8
+ P/R per class -> 0(H): 90.6/82.8 , 1(AI): 70.1/82.4
+ CM [[TN FP],[FN TP]] = [[2607, 541], [271, 1271]]
+85.7,83.1,76.6,86.8,92.8,82.8,71.2,0.914,0.854
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.48it/s]
+epoch 51: train_loss 0.012910727810646807
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.23it/s]
+Epoch:  85%|████████▌ | 51/60 [47:22<07:24, 49.37s/it]Validation Loss: 0.5281118489801884
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 84.584
+Macro F1 Score: 82.434
+Binary F1 Score (pos): 76.287
+Precision/Recall per class:
+88.1,89.1,77.2,75.4
+CM [[TN FP],[FN TP]] = [[2804, 344], [379, 1163]]
+ROC_AUC (fpr-tpr): 0.913
+AUPRC: 0.852
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=83.5  MacroF1=81.3  BinF1(pos)=74.7
+ P/R per class -> 0(H): 87.4/88.2 , 1(AI): 75.5/73.9
+ CM [[TN FP],[FN TP]] = [[2778, 370], [402, 1140]]
+[thr=YoudenJ] thr=0.394 | Acc=82.6  MacroF1=81.1  BinF1(pos)=75.9
+ P/R per class -> 0(H): 91.0/82.1 , 1(AI): 69.6/83.5
+ CM [[TN FP],[FN TP]] = [[2586, 562], [255, 1287]]
+[thr=bestPosF1] thr=0.458 | Acc=83.8  MacroF1=81.9  BinF1(pos)=76.1
+ P/R per class -> 0(H): 89.1/86.3 , 1(AI): 73.8/78.5
+ CM [[TN FP],[FN TP]] = [[2718, 430], [332, 1210]]
+84.6,82.4,76.3,88.1,89.1,77.2,75.4,0.913,0.852
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.49it/s]
+epoch 52: train_loss 0.01295818252459405
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.19it/s]
+Epoch:  87%|████████▋ | 52/60 [48:11<06:34, 49.35s/it]Validation Loss: 0.5315813347697258
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 85.075
+Macro F1 Score: 82.203
+Binary F1 Score (pos): 75.053
+Precision/Recall per class:
+85.7,93.3,83.3,68.3
+CM [[TN FP],[FN TP]] = [[2937, 211], [489, 1053]]
+ROC_AUC (fpr-tpr): 0.913
+AUPRC: 0.853
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=84.4  MacroF1=81.3  BinF1(pos)=73.7
+ P/R per class -> 0(H): 85.0/93.1 , 1(AI): 82.5/66.5
+ CM [[TN FP],[FN TP]] = [[2931, 217], [516, 1026]]
+[thr=YoudenJ] thr=0.303 | Acc=82.4  MacroF1=81.0  BinF1(pos)=75.8
+ P/R per class -> 0(H): 91.3/81.5 , 1(AI): 69.0/84.0
+ CM [[TN FP],[FN TP]] = [[2567, 581], [246, 1296]]
+[thr=bestPosF1] thr=0.303 | Acc=82.4  MacroF1=81.0  BinF1(pos)=75.8
+ P/R per class -> 0(H): 91.3/81.5 , 1(AI): 69.0/84.0
+ CM [[TN FP],[FN TP]] = [[2567, 581], [246, 1296]]
+85.1,82.2,75.1,85.7,93.3,83.3,68.3,0.913,0.853
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.48it/s]
+epoch 53: train_loss 0.012919833454939108
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.23it/s]
+Epoch:  88%|████████▊ | 53/60 [49:00<05:44, 49.28s/it]Validation Loss: 0.5302541963756084
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 85.565
+Macro F1 Score: 83.221
+Binary F1 Score (pos): 76.949
+Precision/Recall per class:
+87.5,91.6,81.0,73.3
+CM [[TN FP],[FN TP]] = [[2883, 265], [412, 1130]]
+ROC_AUC (fpr-tpr): 0.913
+AUPRC: 0.853
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=83.9  MacroF1=81.3  BinF1(pos)=74.3
+ P/R per class -> 0(H): 86.3/90.5 , 1(AI): 78.4/70.6
+ CM [[TN FP],[FN TP]] = [[2848, 300], [454, 1088]]
+[thr=YoudenJ] thr=0.331 | Acc=81.9  MacroF1=80.6  BinF1(pos)=75.6
+ P/R per class -> 0(H): 91.8/80.1 , 1(AI): 67.8/85.5
+ CM [[TN FP],[FN TP]] = [[2521, 627], [224, 1318]]
+[thr=bestPosF1] thr=0.353 | Acc=82.3  MacroF1=80.8  BinF1(pos)=75.6
+ P/R per class -> 0(H): 91.1/81.6 , 1(AI): 69.0/83.7
+ CM [[TN FP],[FN TP]] = [[2568, 580], [252, 1290]]
+85.6,83.2,76.9,87.5,91.6,81.0,73.3,0.913,0.853
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.48it/s]
+epoch 54: train_loss 0.01284480117084015
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.30it/s]
+Validation Loss: 0.5265266038477421
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 85.480
+Macro F1 Score: 83.115
+Binary F1 Score (pos): 76.797
+Precision/Recall per class:
+87.4,91.6,80.9,73.1
+CM [[TN FP],[FN TP]] = [[2882, 266], [415, 1127]]
+ROC_AUC (fpr-tpr): 0.914
+AUPRC: 0.854
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=83.8  MacroF1=81.2  BinF1(pos)=74.2
+ P/R per class -> 0(H): 86.3/90.2 , 1(AI): 78.0/70.8
+ CM [[TN FP],[FN TP]] = [[2840, 308], [451, 1091]]
+[thr=YoudenJ] thr=0.335 | Acc=82.2  MacroF1=80.9  BinF1(pos)=75.9
+ P/R per class -> 0(H): 91.8/80.6 , 1(AI): 68.3/85.3
+ CM [[TN FP],[FN TP]] = [[2537, 611], [226, 1316]]
+[thr=bestPosF1] thr=0.335 | Acc=82.2  MacroF1=80.9  BinF1(pos)=75.9
+ P/R per class -> 0(H): 91.8/80.6 , 1(AI): 68.3/85.3
+ CM [[TN FP],[FN TP]] = [[2537, 611], [226, 1316]]
+85.5,83.1,76.8,87.4,91.6,80.9,73.1,0.914,0.854
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.49it/s]
+epoch 55: train_loss 0.012836675780514875
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.23it/s]
+Epoch:  92%|█████████▏| 55/60 [50:39<04:06, 49.21s/it]Validation Loss: 0.5276092551648617
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 85.032
+Macro F1 Score: 82.805
+Binary F1 Score (pos): 76.616
+Precision/Recall per class:
+87.9,90.2,78.8,74.6
+CM [[TN FP],[FN TP]] = [[2838, 310], [392, 1150]]
+ROC_AUC (fpr-tpr): 0.914
+AUPRC: 0.854
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=83.9  MacroF1=81.6  BinF1(pos)=75.0
+ P/R per class -> 0(H): 87.3/88.8 , 1(AI): 76.4/73.7
+ CM [[TN FP],[FN TP]] = [[2796, 352], [405, 1137]]
+[thr=YoudenJ] thr=0.350 | Acc=81.9  MacroF1=80.6  BinF1(pos)=75.8
+ P/R per class -> 0(H): 92.2/79.8 , 1(AI): 67.6/86.2
+ CM [[TN FP],[FN TP]] = [[2511, 637], [213, 1329]]
+[thr=bestPosF1] thr=0.350 | Acc=81.9  MacroF1=80.6  BinF1(pos)=75.8
+ P/R per class -> 0(H): 92.2/79.8 , 1(AI): 67.6/86.2
+ CM [[TN FP],[FN TP]] = [[2511, 637], [213, 1329]]
+85.0,82.8,76.6,87.9,90.2,78.8,74.6,0.914,0.854
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.48it/s]
+epoch 56: train_loss 0.012794302288620244
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.28it/s]
+Epoch:  93%|█████████▎| 56/60 [51:28<03:16, 49.14s/it]Validation Loss: 0.5273156128823757
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 85.629
+Macro F1 Score: 83.236
+Binary F1 Score (pos): 76.902
+Precision/Recall per class:
+87.3,91.9,81.5,72.8
+CM [[TN FP],[FN TP]] = [[2894, 254], [420, 1122]]
+ROC_AUC (fpr-tpr): 0.914
+AUPRC: 0.854
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=84.0  MacroF1=81.4  BinF1(pos)=74.4
+ P/R per class -> 0(H): 86.3/90.5 , 1(AI): 78.5/70.8
+ CM [[TN FP],[FN TP]] = [[2849, 299], [451, 1091]]
+[thr=YoudenJ] thr=0.329 | Acc=82.0  MacroF1=80.7  BinF1(pos)=75.7
+ P/R per class -> 0(H): 91.7/80.5 , 1(AI): 68.1/85.2
+ CM [[TN FP],[FN TP]] = [[2533, 615], [228, 1314]]
+[thr=bestPosF1] thr=0.329 | Acc=82.0  MacroF1=80.7  BinF1(pos)=75.7
+ P/R per class -> 0(H): 91.7/80.5 , 1(AI): 68.1/85.2
+ CM [[TN FP],[FN TP]] = [[2533, 615], [228, 1314]]
+85.6,83.2,76.9,87.3,91.9,81.5,72.8,0.914,0.854
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.49it/s]
+epoch 57: train_loss 0.01283367888795005
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.31it/s]
+Epoch:  95%|█████████▌| 57/60 [52:16<02:26, 48.99s/it]Validation Loss: 0.5270001627504826
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 84.883
+Macro F1 Score: 82.654
+Binary F1 Score (pos): 76.437
+Precision/Recall per class:
+87.8,89.9,78.4,74.6
+CM [[TN FP],[FN TP]] = [[2831, 317], [392, 1150]]
+ROC_AUC (fpr-tpr): 0.913
+AUPRC: 0.853
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=83.7  MacroF1=81.4  BinF1(pos)=74.7
+ P/R per class -> 0(H): 87.1/88.9 , 1(AI): 76.3/73.2
+ CM [[TN FP],[FN TP]] = [[2798, 350], [413, 1129]]
+[thr=YoudenJ] thr=0.345 | Acc=81.7  MacroF1=80.5  BinF1(pos)=75.7
+ P/R per class -> 0(H): 92.3/79.4 , 1(AI): 67.3/86.5
+ CM [[TN FP],[FN TP]] = [[2499, 649], [208, 1334]]
+[thr=bestPosF1] thr=0.365 | Acc=82.1  MacroF1=80.8  BinF1(pos)=75.7
+ P/R per class -> 0(H): 91.5/80.8 , 1(AI): 68.4/84.7
+ CM [[TN FP],[FN TP]] = [[2545, 603], [236, 1306]]
+84.9,82.7,76.4,87.8,89.9,78.4,74.6,0.913,0.853
+Iteration: 100%|██████████| 63/63 [00:43<00:00,  1.46it/s]
+epoch 58: train_loss 0.012802334679734139
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.28it/s]
+Epoch:  97%|█████████▋| 58/60 [53:06<01:38, 49.18s/it]Validation Loss: 0.5269230976700783
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 85.139
+Macro F1 Score: 82.832
+Binary F1 Score (pos): 76.540
+Precision/Recall per class:
+87.6,90.7,79.6,73.7
+CM [[TN FP],[FN TP]] = [[2856, 292], [405, 1137]]
+ROC_AUC (fpr-tpr): 0.914
+AUPRC: 0.854
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=83.7  MacroF1=81.1  BinF1(pos)=74.1
+ P/R per class -> 0(H): 86.4/89.9 , 1(AI): 77.5/71.0
+ CM [[TN FP],[FN TP]] = [[2830, 318], [447, 1095]]
+[thr=YoudenJ] thr=0.334 | Acc=81.9  MacroF1=80.6  BinF1(pos)=75.7
+ P/R per class -> 0(H): 92.0/79.9 , 1(AI): 67.7/85.8
+ CM [[TN FP],[FN TP]] = [[2516, 632], [219, 1323]]
+[thr=bestPosF1] thr=0.341 | Acc=82.1  MacroF1=80.7  BinF1(pos)=75.7
+ P/R per class -> 0(H): 91.6/80.7 , 1(AI): 68.3/85.0
+ CM [[TN FP],[FN TP]] = [[2539, 609], [232, 1310]]
+85.1,82.8,76.5,87.6,90.7,79.6,73.7,0.914,0.854
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.49it/s]
+epoch 59: train_loss 0.012788230863710245
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.19it/s]
+Epoch:  98%|█████████▊| 59/60 [53:55<00:49, 49.16s/it]Validation Loss: 0.5274151377379894
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 85.139
+Macro F1 Score: 82.832
+Binary F1 Score (pos): 76.540
+Precision/Recall per class:
+87.6,90.7,79.6,73.7
+CM [[TN FP],[FN TP]] = [[2856, 292], [405, 1137]]
+ROC_AUC (fpr-tpr): 0.913
+AUPRC: 0.854
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=83.7  MacroF1=81.2  BinF1(pos)=74.2
+ P/R per class -> 0(H): 86.5/89.8 , 1(AI): 77.4/71.3
+ CM [[TN FP],[FN TP]] = [[2827, 321], [442, 1100]]
+[thr=YoudenJ] thr=0.336 | Acc=81.8  MacroF1=80.6  BinF1(pos)=75.6
+ P/R per class -> 0(H): 92.0/79.9 , 1(AI): 67.6/85.7
+ CM [[TN FP],[FN TP]] = [[2515, 633], [220, 1322]]
+[thr=bestPosF1] thr=0.392 | Acc=82.8  MacroF1=81.2  BinF1(pos)=75.7
+ P/R per class -> 0(H): 90.1/83.6 , 1(AI): 70.8/81.3
+ CM [[TN FP],[FN TP]] = [[2632, 516], [289, 1253]]
+85.1,82.8,76.5,87.6,90.7,79.6,73.7,0.913,0.854
+Iteration: 100%|██████████| 63/63 [00:42<00:00,  1.50it/s]
+epoch 60: train_loss 0.012790719387195414
+Iteration: 100%|██████████| 8/8 [00:06<00:00,  1.30it/s]
+Epoch: 100%|██████████| 60/60 [54:43<00:00, 54.73s/it]
+Validation Loss: 0.5271994732320309
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 85.181
+Macro F1 Score: 82.888
+Binary F1 Score (pos): 76.623
+Precision/Recall per class:
+87.6,90.7,79.6,73.9
+CM [[TN FP],[FN TP]] = [[2856, 292], [403, 1139]]
+ROC_AUC (fpr-tpr): 0.913
+AUPRC: 0.854
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=83.8  MacroF1=81.3  BinF1(pos)=74.4
+ P/R per class -> 0(H): 86.6/89.8 , 1(AI): 77.4/71.6
+ CM [[TN FP],[FN TP]] = [[2826, 322], [438, 1104]]
+[thr=YoudenJ] thr=0.341 | Acc=82.0  MacroF1=80.7  BinF1(pos)=75.7
+ P/R per class -> 0(H): 91.7/80.5 , 1(AI): 68.2/85.1
+ CM [[TN FP],[FN TP]] = [[2535, 613], [229, 1313]]
+[thr=bestPosF1] thr=0.341 | Acc=82.0  MacroF1=80.7  BinF1(pos)=75.7
+ P/R per class -> 0(H): 91.7/80.5 , 1(AI): 68.2/85.1
+ CM [[TN FP],[FN TP]] = [[2535, 613], [229, 1313]]
+85.2,82.9,76.6,87.6,90.7,79.6,73.9,0.913,0.854
+Reloading best model from ckpt/codenet(python)_gemini_hybrid_line_sel_prompt_best_f1.pt
+Iteration: 100%|██████████| 18/18 [00:17<00:00,  1.05it/s]
+******** Sentence Level Evalation ********
+=== Given labels (as-is) ===
+Accuracy: 81.466
+Macro F1 Score: 78.648
+Binary F1 Score (pos): 70.891
+Precision/Recall per class:
+82.5,90.7,78.8,64.4
+CM [[TN FP],[FN TP]] = [[7503, 773], [1588, 2875]]
+ROC_AUC (fpr-tpr): 0.883
+AUPRC: 0.807
+=== Threshold sweeps on scores ===
+[thr=0.5] thr=0.500 | Acc=81.1  MacroF1=78.3  BinF1(pos)=70.5
+ P/R per class -> 0(H): 82.5/90.0 , 1(AI): 77.6/64.6
+ CM [[TN FP],[FN TP]] = [[7445, 831], [1582, 2881]]
+[thr=YoudenJ] thr=0.287 | Acc=78.7  MacroF1=77.8  BinF1(pos)=73.4
+ P/R per class -> 0(H): 89.6/76.1 , 1(AI): 65.3/83.7
+ CM [[TN FP],[FN TP]] = [[6294, 1982], [729, 3734]]
+[thr=bestPosF1] thr=0.326 | Acc=79.6  MacroF1=78.5  BinF1(pos)=73.5
+ P/R per class -> 0(H): 88.3/79.2 , 1(AI): 67.6/80.5
+ CM [[TN FP],[FN TP]] = [[6551, 1725], [871, 3592]]
+81.5,78.6,70.9,82.5,90.7,78.8,64.4,0.883,0.807
