@@ -35,7 +35,7 @@
 >     * `Alpha`:  **0.8**
 >   * After updating parameters, some interesting results are noticed
 >     * _Italic_ means the number is higher than `limo_origin`
->     * **_Bolded Italic_** means the number is the highest among the results
+>     * **_Bolded-Italic_** means the number is the highest among the results
 
 ### Given labels (as-is)
 
@@ -89,7 +89,7 @@
 ## Analysis
 > * Overall, `limo_atf128` is having the best performance
 >   * `limo_atf256` and `limo_atfdoc` showed a better performance compare to old version parameters. 
-> * _**AUPRC**_ and _**ROC-AUC**_ improved most significantly, all atf-involved models has a better result in these two criteria.  
+> * _**AUPRC**_ and _**ROC-AUC**_ improved most significantly, all atf-involved models has a better result in these two metrics.  
 > * Conclusion below is received after calculating the cosine similarity between local atf (line-level) and global atf (doc-level)
 >   * Image: the relationship between cosine similarity and lines
 >     ![Alt](/assets/cosine_sim_dis.png)
@@ -101,7 +101,7 @@
 >       ```
 >   * These results showed that there is a difference in cosine similarity between local-atf and global-atf among human and machine generated codes
 >     * The difference in average cos_sim
->     * Human written lines are likely tobe closer to the global intent as shown in the image
+>     * Human written lines are likely to be closer to the global intent as shown in the image
 >       * (The blue part shifts to the right, and the orange is closer to the left-hand-side)
 >   * Even though this result suggests Approximated Task Feature (a.t.f) as an effective feature in MGC detection, but the difference between Human-ATF and Machine-ATF are not decisive enough to detect MGC independently
 >     * However, as a supportive feature, it does play a role of improving the performance of LiMO
