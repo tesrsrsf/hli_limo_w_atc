@@ -92,7 +92,7 @@
 > * _**AUPRC**_ and _**ROC-AUC**_ improved most significantly, all atf-involved models has a better result in these two criteria.  
 > * Conclusion below is received after calculating the cosine similarity between local atf (line-level) and global atf (doc-level)
 >   * Image: the relationship between cosine similarity and lines
->     ![](/assets/cosine_sim_dis.png)
+>     ![Alt](/assets/cosine_sim_dis.png)
 >     * ("High-info lines only" means: lines like 'else', '[', '(', '{'... are ignored)
 >   * Average cosine similarities:
 >     * ```
