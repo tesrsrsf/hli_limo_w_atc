@@ -7,6 +7,8 @@
 > 
 > `limo_origin` is the project directory for original LiMO
 > 
+> `limo_atc_demo` is the directory of a web UI demo of LiMO-ATC
+> 
 > `res` stores the output of `train_ui.ipynb` during training:
 > * `limo_origin.txt`: Output of the original LiMO
 > * `limo_atf128.txt`: Output of **_LiMO-ATC_** with 128-dimensions `atfeatures`
@@ -108,3 +110,16 @@
 >       * a.t.f can be considered as a weak signal
 >     * The prompting strategy can be revised to fit this feature
 >       * Especially for global intent (doc-level)
+
+---
+## Demo
+* This demo was developed with _streamlit_
+* How to start: 
+  1. Start backend API using command 
+     ```bash
+     sh backend_api.sh
+     ```
+  2. Start streamlit demo
+     ```bash
+     streamlit run app.py
+     ```
