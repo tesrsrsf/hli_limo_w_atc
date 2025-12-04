@@ -7,7 +7,7 @@
 > 
 > `limo_origin` is the project directory for original LiMO
 > 
-> `limo_atc_demo` is the directory of a web UI demo of LiMO-ATC
+> `limo_atc_demo` is the directory of a web UI demo of LiMO with `atfeatures`
 > 
 > `res` stores the output of `train_ui.ipynb` during training:
 > * `limo_origin.txt`: Output of the original LiMO
