@@ -130,7 +130,10 @@
 >       * Current approach's result is not doing well. 
 >     * Still awaits further improvements, strengthening the difference between HWC and MGC
 >       * Like finding the outlier, select the one has the longest distance to the average, etc
-
+>   * About `limo_atfraw`
+>     * Due to the concern of losing information during PCA process, an experiment to original _768-dim_ `atfeatures` is conducted to determine the influence of PCA to `atfeatures`
+>     * As shown in the result, `limo_atfraw` without _768dim -> 128dim_ process outperforms all other methods
+>     * So the loss of information is significant to `atfeatures`
 ---
 ## Demo
 * This demo was developed with _streamlit_
