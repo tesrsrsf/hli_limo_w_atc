@@ -127,7 +127,8 @@
 >     * This means 'Selecting Prompt'
 >     * This method is to generate several responses to one segment, get raw embedded values with codeBERT, then take the average
 >     * This approach aims to strengthen the difference in `atfeatures` between HWC and MGC
->       * Current approach's result is not doing well. 
+>       * Current approach's result is not doing well.
+>       * Averaging their embeddings may actually smooth out the subtle differences between HWC and MGC rather than amplifying them
 >     * Still awaits further improvements, strengthening the difference between HWC and MGC
 >       * Like finding the outlier, select the one has the longest distance to the average, etc
 >   * About `limo_atfraw`
