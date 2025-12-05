@@ -17,7 +17,7 @@
 > * `limo_atfdoc.txt`: Output of document-level `atfeatures`
 > * `limo_atfraw.txt`: Output of **_LiMO-ATC_** with 768-dimensions `atfeatures`
 > * `limo_newprt.txt`: Output of **_LiMO-ATC_** with new `atfeatures` produced with new prompt
-> * `limo_selprt.txt`: Output of **_LiMO-ATC_** with new `atfeatures` produced with new prompt
+> * `limo_selprt.txt`: Output of **_LiMO-ATC_** with new `atfeatures` produced with a new AT strategy
 >
 > `do_test_res` stores test results of `train_ui.ipynb`, including:
 > * `limo_origin.txt`: Output of the original LiMO
@@ -27,7 +27,7 @@
 > * `limo_atfdoc.txt`: Output of document-level `atfeatures`
 > * `limo_atfraw.txt`: Output of **_LiMO-ATC_** with 768-dimensions `atfeatures`
 > * `limo_newprt.txt`: Output of **_LiMO-ATC_** with new `atfeatures` produced with new prompt
-> * `limo_selprt.txt`: Output of **_LiMO-ATC_** with new `atfeatures` produced with new prompt
+> * `limo_selprt.txt`: Output of **_LiMO-ATC_** with new `atfeatures` produced with a new AT strategy
 > 
 > `new_2ds.ipynb` is used to generate approximated task and getting the embedded values of **_CodeBERT_**
 
