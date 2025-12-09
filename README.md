@@ -123,6 +123,14 @@
 >       * a.t.f can be considered as a weak signal
 >     * The prompting strategy can be revised to fit this feature
 >       * Especially for global intent (doc-level)
+>
+>   * About `limo_newprt`
+>     * This means 'New Prompt'
+>     * This version used a new prompting strategy to investigate whether including full program context (global context) will influence differentiality between coding intention MGC segments and HWC segments (local contexts)
+>     * The new prompt does not include global context, provide target segment only
+>     * The result can be checked through the file above
+>     * The result shows that local context only can not produce `atfeatures` with enough differentiality compare to regular method
+>     * The reason of this result is likely because of the lack of global information, which makes produced approximated task the features encoded degenerate into near-random noise, making them difficult to distinguish
 >   * About `limo_selprt`
 >     * This means 'Selecting Prompt'
 >     * This method is to generate several responses to one segment, get raw embedded values with codeBERT, then take the average
@@ -135,9 +143,11 @@
 >     * Due to the concern of losing information during PCA process, an experiment to original _768-dim_ `atfeatures` is conducted to determine the influence of PCA to `atfeatures`
 >     * As shown in the result, `limo_atfraw` without _768dim -> 128dim_ process outperforms all other methods
 >     * So the loss of information is significant to `atfeatures`
+
 ---
 ## Demo
 * This demo was developed with _streamlit_
+* The model used in this demo is `limo_atf128`
 * How to start: 
   1. Start backend API using command 
      ```bash
