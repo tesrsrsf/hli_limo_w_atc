@@ -59,16 +59,13 @@ for i in range(m):
 print(max(dp))
 """
 
-
 MAX_CODE_LINES = 400  # Maximum number of lines to display/process in the UI
-
 
 # Highlight colors
 AI_BG_COLOR = "#ffc4c4"
 HUMAN_BG_COLOR = "#b5eaff"
 AI_TEXT_COLOR = "#8E3535"
 HUMAN_TEXT_COLOR = "#125C65"
-
 
 # ============ AT feature global config ============
 
@@ -77,14 +74,14 @@ LLM_MODEL_NAME = os.environ.get("LLM_MODEL_NAME", "codellama/CodeLlama-7b-Instru
 EMBED_MODEL_NAME = os.environ.get("EMBED_MODEL_NAME", "microsoft/codebert-base")
 
 # Generation / encoding related
-N_TASKS_PER_SEGMENT = int(os.environ.get("N_TASKS_PER_SEGMENT", "1"))   # Usually 1 is enough
-LLM_MAX_NEW_TOKENS  = int(os.environ.get("LLM_MAX_NEW_TOKENS", "64"))
-LLM_TEMPERATURE     = float(os.environ.get("LLM_TEMPERATURE", "0.3"))
-EMBED_MAX_LEN       = int(os.environ.get("EMBED_MAX_LEN", "256"))
+N_TASKS_PER_SEGMENT = int(os.environ.get("N_TASKS_PER_SEGMENT", "1"))  # Usually 1 is enough
+LLM_MAX_NEW_TOKENS = int(os.environ.get("LLM_MAX_NEW_TOKENS", "64"))
+LLM_TEMPERATURE = float(os.environ.get("LLM_TEMPERATURE", "0.3"))
+EMBED_MAX_LEN = int(os.environ.get("EMBED_MAX_LEN", "256"))
 
 # PCA path (segment-level PCA)
 SEG_PCA_PATH = os.environ.get("SEG_PCA_PATH", "./pca/segment_python_atfeature_pca128.pkl")
-AT_DIM       = int(os.environ.get("AT_DIM", "128"))
+AT_DIM = int(os.environ.get("AT_DIM", "128"))
 
 # Segmentation related
 MIN_SEG_LINES = int(os.environ.get("MIN_SEG_LINES", "1"))  # Minimum segment lines
@@ -196,9 +193,9 @@ class TaskGenerator:
 
     @staticmethod
     def prompt_segment(
-        segment_text: str,
-        language_hint: Optional[str] = None,
-        context_text: str = "",
+            segment_text: str,
+            language_hint: Optional[str] = None,
+            context_text: str = "",
     ) -> str:
         lang = language_hint or ""
         prog_ctx = (
@@ -223,7 +220,7 @@ class TaskGenerator:
     def wrap_chat(self, user_text: str) -> str:
         """把 user_text 包进 chat 模板（兼容 llama / instruct 系模型）。"""
         if hasattr(self.tokenizer, "apply_chat_template") and callable(
-            self.tokenizer.apply_chat_template
+                self.tokenizer.apply_chat_template
         ):
             msgs = [{"role": "user", "content": user_text}]
             return self.tokenizer.apply_chat_template(
@@ -234,10 +231,10 @@ class TaskGenerator:
 
     @torch.inference_mode()
     def gen_tasks(
-        self,
-        segment_text: str,
-        language_hint: Optional[str] = None,
-        context_text: str = "",
+            self,
+            segment_text: str,
+            language_hint: Optional[str] = None,
+            context_text: str = "",
     ) -> List[str]:
         prompt = self.prompt_segment(segment_text, language_hint, context_text)
         full = self.wrap_chat(prompt)
@@ -308,12 +305,12 @@ class TaskEmbedder:
             return_tensors="pt",
         ).to(self.model.device)
         out = self.model(**enc)
-        last = out.last_hidden_state                 # [B, L, H]
-        mask = enc["attention_mask"].unsqueeze(-1)   # [B, L, 1]
+        last = out.last_hidden_state  # [B, L, H]
+        mask = enc["attention_mask"].unsqueeze(-1)  # [B, L, 1]
         summed = (last * mask).sum(dim=1)
         denom = mask.sum(dim=1).clamp(min=1)
-        mean_pool = summed / denom                   # [B, H]
-        return mean_pool.float().cpu().numpy()       # float32
+        mean_pool = summed / denom  # [B, H]
+        return mean_pool.float().cpu().numpy()  # float32
 
 
 # ============ Segment-level PCA: from 768 → 128 ============
@@ -339,7 +336,8 @@ def project_at_vecs(vecs_768: np.ndarray, pca: Optional[IncrementalPCA]) -> np.n
 
 # ============ segment-level AT features ============
 
-def compute_segment_atfeatures_for_code(code: str, language_hint: str = LANGUAGE_HINT, progress_cb: Optional[callable] = None) -> List[Dict[str, Any]]:
+def compute_segment_atfeatures_for_code(code: str, language_hint: str = LANGUAGE_HINT,
+                                        progress_cb: Optional[callable] = None) -> List[Dict[str, Any]]:
     lines = code.splitlines()
     if not lines:
         return []
@@ -355,8 +353,8 @@ def compute_segment_atfeatures_for_code(code: str, language_hint: str = LANGUAGE
 
     total = len(segs) if segs else 1
     for seg_id, (s, e) in enumerate(segs):
-        seg_text = "\n".join(lines[s : e + 1])
-        ctx_text = full_program_text   # Same as new_2ds: use the entire program as context
+        seg_text = "\n".join(lines[s: e + 1])
+        ctx_text = full_program_text  # Same as new_2ds: use the entire program as context
 
         try:
             tasks = taskgen.gen_tasks(seg_text, language_hint, ctx_text)
@@ -364,8 +362,8 @@ def compute_segment_atfeatures_for_code(code: str, language_hint: str = LANGUAGE
             # Default fallback
             tasks = ["Summarize the high-level purpose of this code segment."]
 
-        vecs = embedder.encode(tasks)      # [n_tasks, 768]
-        vec_raw = vecs.mean(axis=0)        # [768]
+        vecs = embedder.encode(tasks)  # [n_tasks, 768]
+        vec_raw = vecs.mean(axis=0)  # [768]
         vec128 = project_at_vecs(vec_raw[None, :], pca)[0]  # [AT_DIM]
 
         rec = {
@@ -402,12 +400,12 @@ def broadcast_segment_atfeatures_to_lines(code: str, segments: List[Dict[str, An
         if e < s:
             continue
 
-        A[s : e + 1] += vec[None, :]
-        C[s : e + 1] += 1
+        A[s: e + 1] += vec[None, :]
+        C[s: e + 1] += 1
 
     # C: [L, 1]
     # We only care about whether each line is covered by at least one segment
-    mask = (C[:, 0] > 0)        # [L] bool
+    mask = (C[:, 0] > 0)  # [L] bool
     if np.any(mask):
         counts = C[mask, 0].astype(np.float32)
         counts = counts.reshape(-1, 1)
@@ -417,14 +415,14 @@ def broadcast_segment_atfeatures_to_lines(code: str, segments: List[Dict[str, An
     return A
 
 
-def compute_atfeatures_for_code_segment_based(code: str, language_hint: str = LANGUAGE_HINT, progress_cb: Optional[callable] = None) -> np.ndarray:
+def compute_atfeatures_for_code_segment_based(code: str, language_hint: str = LANGUAGE_HINT,
+                                              progress_cb: Optional[callable] = None) -> np.ndarray:
     segments = compute_segment_atfeatures_for_code(code, language_hint=language_hint, progress_cb=progress_cb)
     if not segments:
         # in case there is no segment, return all-zero features
         n_lines = max(len(code.splitlines()), 1)
         return np.zeros((n_lines, AT_DIM), dtype=np.float32)
     return broadcast_segment_atfeatures_to_lines(code, segments, dim=AT_DIM)
-
 
 
 # =========================
@@ -525,7 +523,8 @@ def run_pylint_on_code(code: str, pylint_cmd: str = "pylint") -> str:
 # 3) Convert pylint output → ccfeature
 # -------------------------
 
-def analyze_pylint_output_line(eval_result: str, total_lines: int, error_codes: Optional[List[str]] = None) -> List[List[int]]:
+def analyze_pylint_output_line(eval_result: str, total_lines: int, error_codes: Optional[List[str]] = None) -> List[
+    List[int]]:
     """
     Parse pylint output into a line-level error code count matrix.
 
@@ -648,7 +647,7 @@ def compute_ll_features_for_code(code: str):
     # 3. Trim to the same length, then transpose [4, T] → [T, 4]
     aligned = [seq[:min_len] for seq in trimmed]
     arr = np.asarray(aligned, dtype=np.float32)  # [4, T]
-    feats = arr.T                                 # [T, 4]
+    feats = arr.T  # [T, 4]
 
     return feats
 
@@ -666,7 +665,6 @@ def load_detector_model(checkpoint_path: str):
         saved = torch.load(checkpoint_path, map_location=device, weights_only=False)
 
     st.success("Finished loading checkpoint shards.")
-
 
     if isinstance(saved, nn.Module):
         model = saved
@@ -713,7 +711,7 @@ def run_detection_real_backend(code: str, threshold: float, model) -> pd.DataFra
     # --- Ordinary ll_token features: [T, 4] ---
     with st.spinner("Computing ll_features..."):
 
-        ll_mat = compute_ll_features_for_code(code)          # [T, 4]
+        ll_mat = compute_ll_features_for_code(code)  # [T, 4]
         if ll_mat.ndim != 2 or ll_mat.shape[1] != 4:
             # If something went wrong, treat as none
             T_ll = 0
@@ -722,7 +720,7 @@ def run_detection_real_backend(code: str, threshold: float, model) -> pd.DataFra
         else:
             T_ll = ll_mat.shape[0]
             feat_channels = ll_mat.shape[1]
-    
+
     st.success("Finished computing ll_features.")
 
     # --- 1) ccfeature: [n_lines, C_cc] ---
@@ -766,7 +764,6 @@ def run_detection_real_backend(code: str, threshold: float, model) -> pd.DataFra
     if T_ll > 0:
         x_full[0, :valid_L, :] = torch.from_numpy(ll_mat[:valid_L, :]).to(device)
 
-
     # ccfeature pad to [seq_len, cc_dim]
     if cc_dim == 0:
         cc_full = np.zeros((seq_len, 0), dtype=np.float32)
@@ -785,7 +782,6 @@ def run_detection_real_backend(code: str, threshold: float, model) -> pd.DataFra
     # During inference, we just use 0 to mark real lines (only for mask=True)
     labels = torch.full((1, seq_len), -1, dtype=torch.long, device=device)
     labels[0, :valid_L] = 0  # 0 = B-human, the specific value doesn't matter, just > -1
-
 
     # --- 5) Run model ---
     model.eval()
@@ -889,14 +885,14 @@ def build_highlighted_code_html(df: pd.DataFrame) -> str:
 
         html_lines.append(
             f'<div style="background-color:{bg}; padding:2px 6px; margin:1px 0;">'
-                f'<span style="color:#888; width:3em; display:inline-block; text-align:right;">'
-                    f'{line_no:>3}'
-                '</span>'
-                f'<span style="color:#aaa; margin:0 4px;">|</span>'
-                f'<span style="color:{fg}; font-weight:bold; margin-right:6px;">'
-                    f'[{label} {ai_prob:.2f}]'
-                f'</span>'
-                f'<span style="white-space:pre;color:{fg}">{text}</span>'
+            f'<span style="color:#888; width:3em; display:inline-block; text-align:right;">'
+            f'{line_no:>3}'
+            '</span>'
+            f'<span style="color:#aaa; margin:0 4px;">|</span>'
+            f'<span style="color:{fg}; font-weight:bold; margin-right:6px;">'
+            f'[{label} {ai_prob:.2f}]'
+            f'</span>'
+            f'<span style="white-space:pre;color:{fg}">{text}</span>'
             f'</div>'
         )
 
@@ -932,13 +928,13 @@ def main():
             help="Lines with a probability greater than or equal to this threshold will be classified as AI-generated.",
         )
 
-        max_lines_display = st.number_input( 
-            "Max lines to display", 
-            min_value=50, 
-            max_value=1000, 
-            value=MAX_CODE_LINES, 
-            step=50, 
-            help="Only affects frontend display, does not affect backend inference.", 
+        max_lines_display = st.number_input(
+            "Max lines to display",
+            min_value=50,
+            max_value=1000,
+            value=MAX_CODE_LINES,
+            step=50,
+            help="Only affects frontend display, does not affect backend inference.",
         )
 
         st.markdown("---")
