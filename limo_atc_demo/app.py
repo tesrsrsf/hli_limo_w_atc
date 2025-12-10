@@ -94,6 +94,12 @@ SEED = int(os.environ.get("SEED", "1234"))
 np.random.seed(SEED)
 torch.manual_seed(SEED)
 
+# GPU settings
+GPU_ID_LLAMA = int(os.environ.get("GPU_ID_LLAMA", "2"))
+GPU_ID_BERT = int(os.environ.get("GPU_ID_BERT", "3"))
+GPU_MEM_LLAMA = os.environ.get("GPU_MEM_LLAMA", "12GiB")
+GPU_MEM_BERT = os.environ.get("GPU_MEM_BERT", "12GiB")
+
 
 # ============ Segmenter: same segmentation logic as new_2ds ============
 
@@ -173,7 +179,7 @@ class TaskGenerator:
     """Use LLM to turn a code segment into one sentence describing its design intent."""
 
     def __init__(self):
-        max_memory = {0: "12GiB"}
+        max_memory = {GPU_ID_LLAMA: GPU_MEM_LLAMA}
 
         self.tokenizer = AutoTokenizer.from_pretrained(LLM_MODEL_NAME, use_fast=True)
         self.model = AutoModelForCausalLM.from_pretrained(
@@ -274,7 +280,7 @@ class TaskGenerator:
 # ============ TaskEmbedder: CodeBERT 768-d mean pooling ============
 class TaskEmbedder:
     def __init__(self):
-        max_memory = {0: "12GiB"}
+        max_memory = {GPU_ID_BERT: GPU_MEM_BERT}
         dtype = torch.float16 if torch.cuda.is_available() else torch.float32
 
         self.tokenizer = AutoTokenizer.from_pretrained(EMBED_MODEL_NAME, use_fast=True)
