@@ -22,6 +22,7 @@ APP_SUBTITLE = "Line-level AI code detector"
 
 DEMO_MODE_DEFAULT = False
 
+# In the future, if you want to switch to a different model/checkpoint, you can configure it here
 MODEL_CHECKPOINT_PATH = "./ckpt/codenet(python)_gemini_hybrid_line_best_f1.pt"
 
 # Default example code
@@ -710,15 +711,19 @@ def run_detection_real_backend(code: str, threshold: float, model) -> pd.DataFra
     seq_len = getattr(model, "seq_len", 1024)
 
     # --- Ordinary ll_token features: [T, 4] ---
-    ll_mat = compute_ll_features_for_code(code)          # [T, 4]
-    if ll_mat.ndim != 2 or ll_mat.shape[1] != 4:
-        # If something went wrong, treat as none
-        T_ll = 0
-        feat_channels = 4
-        ll_mat = np.zeros((0, feat_channels), dtype=np.float32)
-    else:
-        T_ll = ll_mat.shape[0]
-        feat_channels = ll_mat.shape[1]
+    with st.spinner("Computing ll_features..."):
+
+        ll_mat = compute_ll_features_for_code(code)          # [T, 4]
+        if ll_mat.ndim != 2 or ll_mat.shape[1] != 4:
+            # If something went wrong, treat as none
+            T_ll = 0
+            feat_channels = 4
+            ll_mat = np.zeros((0, feat_channels), dtype=np.float32)
+        else:
+            T_ll = ll_mat.shape[0]
+            feat_channels = ll_mat.shape[1]
+    
+    st.success("Finished computing ll_features.")
 
     # --- 1) ccfeature: [n_lines, C_cc] ---
     cc_mat, _ = compute_ccfeatures_for_code(code)
